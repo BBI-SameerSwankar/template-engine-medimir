@@ -1,0 +1,482 @@
+{
+  "id": "topToolsWorldwide",
+  "width": {
+    "phonePortrait": 260,
+    "phoneLandscape": 260,
+    "phoneLandingPortrait": 260,
+    "phoneLandingLandscape": 260,
+    "tabPortrait": 320,
+    "tabLandscape": 320,
+    "tabLandingPortrait": 320,
+    "tabLandingLandscape": 320
+  },
+  "height": {
+    "phonePortrait": 140,
+    "phoneLandscape": 140,
+    "phoneLandingPortrait": 140,
+    "phoneLandingLandscape": 140,
+    "tabPortrait": 150,
+    "tabLandscape": 150,
+    "tabLandingPortrait": 150,
+    "tabLandingLandscape": 150
+  },
+  "borders": {
+    "bottom": {
+      "color": "#DDDDDD",
+      "phonePortrait": 1,
+      "phoneLandscape": 1,
+      "phoneLandingPortrait": 1,
+      "phoneLandingLandscape": 1,
+      "tabPortrait": 1,
+      "tabLandscape": 1,
+      "tabLandingPortrait": 1,
+      "tabLandingLandscape": 1
+    }
+  },
+  "texts": [
+    {
+      "id": "title",
+      "maxlines": 2,
+      "xPoint": 16,
+      "yPoint": 16,
+      "fontsize": {
+        "phonePortrait": 15,
+        "phoneLandscape": 15,
+        "phoneLandingPortrait": 15,
+        "phoneLandingLandscape": 15,
+        "tabPortrait": 16,
+        "tabLandscape": 16,
+        "tabLandingPortrait": 16,
+        "tabLandingLandscape": 16
+      },
+      "fontWeight": "NORMAL",
+      "width": {
+        "phonePortrait": 220,
+        "phoneLandscape": 220,
+        "phoneLandingPortrait": 220,
+        "phoneLandingLandscape": 220,
+        "tabPortrait": 270,
+        "tabLandscape": 270,
+        "tabLandingPortrait": 270,
+        "tabLandingLandscape": 270
+      },
+      "height": {
+        "phonePortrait": 44,
+        "phoneLandscape": 44,
+        "phoneLandingPortrait": 44,
+        "phoneLandingLandscape": 44,
+        "tabPortrait": 48,
+        "tabLandscape": 48,
+        "tabLandingPortrait": 48,
+        "tabLandingLandscape": 48
+      },
+      "padding": {
+        "paddingLeft": {
+          "phonePortrait": 0,
+          "phoneLandscape": 0,
+          "phoneLandingPortrait": 0,
+          "phoneLandingLandscape": 0,
+          "tabPortrait": 0,
+          "tabLandscape": 0,
+          "tabLandingPortrait": 0,
+          "tabLandingLandscape": 0
+        },
+        "paddingRight": {
+          "phonePortrait": 0,
+          "phoneLandscape": 0,
+          "phoneLandingPortrait": 0,
+          "phoneLandingLandscape": 0,
+          "tabPortrait": 0,
+          "tabLandscape": 0,
+          "tabLandingPortrait": 0,
+          "tabLandingLandscape": 0
+        },
+        "paddingTop": {
+          "phonePortrait": 0,
+          "phoneLandscape": 0,
+          "phoneLandingPortrait": 0,
+          "phoneLandingLandscape": 0,
+          "tabPortrait": 0,
+          "tabLandscape": 0,
+          "tabLandingPortrait": 0,
+          "tabLandingLandscape": 0
+        },
+        "paddingBottom": {
+          "phonePortrait": 0,
+          "phoneLandscape": 0,
+          "phoneLandingPortrait": 0,
+          "phoneLandingLandscape": 0,
+          "tabPortrait": 0,
+          "tabLandscape": 0,
+          "tabLandingPortrait": 0,
+          "tabLandingLandscape": 0
+        }
+      },
+      "margin": {
+        "marginLeft": {
+          "phonePortrait": 0,
+          "phoneLandscape": 0,
+          "phoneLandingPortrait": 0,
+          "phoneLandingLandscape": 0,
+          "tabPortrait": 0,
+          "tabLandscape": 0,
+          "tabLandingPortrait": 0,
+          "tabLandingLandscape": 0
+        },
+        "marginRight": {
+          "phonePortrait": 0,
+          "phoneLandscape": 0,
+          "phoneLandingPortrait": 0,
+          "phoneLandingLandscape": 0,
+          "tabPortrait": 0,
+          "tabLandscape": 0,
+          "tabLandingPortrait": 0,
+          "tabLandingLandscape": 0
+        },
+        "marginTop": {
+          "phonePortrait": 0,
+          "phoneLandscape": 0,
+          "phoneLandingPortrait": 0,
+          "phoneLandingLandscape": 0,
+          "tabPortrait": 0,
+          "tabLandscape": 0,
+          "tabLandingPortrait": 0,
+          "tabLandingLandscape": 0
+        },
+        "marginBottom": {
+          "phonePortrait": 0,
+          "phoneLandscape": 0,
+          "phoneLandingPortrait": 0,
+          "phoneLandingLandscape": 0,
+          "tabPortrait": 0,
+          "tabLandscape": 0,
+          "tabLandingPortrait": 0,
+          "tabLandingLandscape": 0
+        }
+      },
+      "decoration": {
+        "borderRadius": false,
+        "shape": "RECTANGLE"
+      }
+    },
+    {
+      "id": "abbr",
+      "maxlines": 1,
+      "xPoint": 16,
+      "yPoint": 86,
+      "fontsize": {
+        "phonePortrait": 13,
+        "phoneLandscape": 13,
+        "phoneLandingPortrait": 13,
+        "phoneLandingLandscape": 13,
+        "tabPortrait": 14,
+        "tabLandscape": 14,
+        "tabLandingPortrait": 14,
+        "tabLandingLandscape": 14
+      },
+      "fontWeight": "NORMAL",
+      "width": {
+        "phonePortrait": 140,
+        "phoneLandscape": 140,
+        "phoneLandingPortrait": 140,
+        "phoneLandingLandscape": 140,
+        "tabPortrait": 170,
+        "tabLandscape": 170,
+        "tabLandingPortrait": 170,
+        "tabLandingLandscape": 170
+      },
+      "height": {
+        "phonePortrait": 18,
+        "phoneLandscape": 18,
+        "phoneLandingPortrait": 18,
+        "phoneLandingLandscape": 18,
+        "tabPortrait": 20,
+        "tabLandscape": 20,
+        "tabLandingPortrait": 20,
+        "tabLandingLandscape": 20
+      },
+      "padding": {
+        "paddingLeft": {
+          "phonePortrait": 0,
+          "phoneLandscape": 0,
+          "phoneLandingPortrait": 0,
+          "phoneLandingLandscape": 0,
+          "tabPortrait": 0,
+          "tabLandscape": 0,
+          "tabLandingPortrait": 0,
+          "tabLandingLandscape": 0
+        },
+        "paddingRight": {
+          "phonePortrait": 0,
+          "phoneLandscape": 0,
+          "phoneLandingPortrait": 0,
+          "phoneLandingLandscape": 0,
+          "tabPortrait": 0,
+          "tabLandscape": 0,
+          "tabLandingPortrait": 0,
+          "tabLandingLandscape": 0
+        },
+        "paddingTop": {
+          "phonePortrait": 0,
+          "phoneLandscape": 0,
+          "phoneLandingPortrait": 0,
+          "phoneLandingLandscape": 0,
+          "tabPortrait": 0,
+          "tabLandscape": 0,
+          "tabLandingPortrait": 0,
+          "tabLandingLandscape": 0
+        },
+        "paddingBottom": {
+          "phonePortrait": 0,
+          "phoneLandscape": 0,
+          "phoneLandingPortrait": 0,
+          "phoneLandingLandscape": 0,
+          "tabPortrait": 0,
+          "tabLandscape": 0,
+          "tabLandingPortrait": 0,
+          "tabLandingLandscape": 0
+        }
+      },
+      "margin": {
+        "marginLeft": {
+          "phonePortrait": 0,
+          "phoneLandscape": 0,
+          "phoneLandingPortrait": 0,
+          "phoneLandingLandscape": 0,
+          "tabPortrait": 0,
+          "tabLandscape": 0,
+          "tabLandingPortrait": 0,
+          "tabLandingLandscape": 0
+        },
+        "marginRight": {
+          "phonePortrait": 0,
+          "phoneLandscape": 0,
+          "phoneLandingPortrait": 0,
+          "phoneLandingLandscape": 0,
+          "tabPortrait": 0,
+          "tabLandscape": 0,
+          "tabLandingPortrait": 0,
+          "tabLandingLandscape": 0
+        },
+        "marginTop": {
+          "phonePortrait": 0,
+          "phoneLandscape": 0,
+          "phoneLandingPortrait": 0,
+          "phoneLandingLandscape": 0,
+          "tabPortrait": 0,
+          "tabLandscape": 0,
+          "tabLandingPortrait": 0,
+          "tabLandingLandscape": 0
+        },
+        "marginBottom": {
+          "phonePortrait": 0,
+          "phoneLandscape": 0,
+          "phoneLandingPortrait": 0,
+          "phoneLandingLandscape": 0,
+          "tabPortrait": 0,
+          "tabLandscape": 0,
+          "tabLandingPortrait": 0,
+          "tabLandingLandscape": 0
+        }
+      },
+      "decoration": {
+        "borderRadius": false,
+        "shape": "RECTANGLE"
+      }
+    },
+    {
+      "id": "toolType",
+      "maxlines": 1,
+      "xPoint": 16,
+      "yPoint": 104,
+      "fontsize": {
+        "phonePortrait": 13,
+        "phoneLandscape": 13,
+        "phoneLandingPortrait": 13,
+        "phoneLandingLandscape": 13,
+        "tabPortrait": 14,
+        "tabLandscape": 14,
+        "tabLandingPortrait": 14,
+        "tabLandingLandscape": 14
+      },
+      "fontWeight": "NORMAL",
+      "width": {
+        "phonePortrait": 140,
+        "phoneLandscape": 140,
+        "phoneLandingPortrait": 140,
+        "phoneLandingLandscape": 140,
+        "tabPortrait": 170,
+        "tabLandscape": 170,
+        "tabLandingPortrait": 170,
+        "tabLandingLandscape": 170
+      },
+      "height": {
+        "phonePortrait": 18,
+        "phoneLandscape": 18,
+        "phoneLandingPortrait": 18,
+        "phoneLandingLandscape": 18,
+        "tabPortrait": 20,
+        "tabLandscape": 20,
+        "tabLandingPortrait": 20,
+        "tabLandingLandscape": 20
+      },
+      "padding": {
+        "paddingLeft": {
+          "phonePortrait": 0,
+          "phoneLandscape": 0,
+          "phoneLandingPortrait": 0,
+          "phoneLandingLandscape": 0,
+          "tabPortrait": 0,
+          "tabLandscape": 0,
+          "tabLandingPortrait": 0,
+          "tabLandingLandscape": 0
+        },
+        "paddingRight": {
+          "phonePortrait": 0,
+          "phoneLandscape": 0,
+          "phoneLandingPortrait": 0,
+          "phoneLandingLandscape": 0,
+          "tabPortrait": 0,
+          "tabLandscape": 0,
+          "tabLandingPortrait": 0,
+          "tabLandingLandscape": 0
+        },
+        "paddingTop": {
+          "phonePortrait": 0,
+          "phoneLandscape": 0,
+          "phoneLandingPortrait": 0,
+          "phoneLandingLandscape": 0,
+          "tabPortrait": 0,
+          "tabLandscape": 0,
+          "tabLandingPortrait": 0,
+          "tabLandingLandscape": 0
+        },
+        "paddingBottom": {
+          "phonePortrait": 0,
+          "phoneLandscape": 0,
+          "phoneLandingPortrait": 0,
+          "phoneLandingLandscape": 0,
+          "tabPortrait": 0,
+          "tabLandscape": 0,
+          "tabLandingPortrait": 0,
+          "tabLandingLandscape": 0
+        }
+      },
+      "margin": {
+        "marginLeft": {
+          "phonePortrait": 0,
+          "phoneLandscape": 0,
+          "phoneLandingPortrait": 0,
+          "phoneLandingLandscape": 0,
+          "tabPortrait": 0,
+          "tabLandscape": 0,
+          "tabLandingPortrait": 0,
+          "tabLandingLandscape": 0
+        },
+        "marginRight": {
+          "phonePortrait": 0,
+          "phoneLandscape": 0,
+          "phoneLandingPortrait": 0,
+          "phoneLandingLandscape": 0,
+          "tabPortrait": 0,
+          "tabLandscape": 0,
+          "tabLandingPortrait": 0,
+          "tabLandingLandscape": 0
+        },
+        "marginTop": {
+          "phonePortrait": 0,
+          "phoneLandscape": 0,
+          "phoneLandingPortrait": 0,
+          "phoneLandingLandscape": 0,
+          "tabPortrait": 0,
+          "tabLandscape": 0,
+          "tabLandingPortrait": 0,
+          "tabLandingLandscape": 0
+        },
+        "marginBottom": {
+          "phonePortrait": 0,
+          "phoneLandscape": 0,
+          "phoneLandingPortrait": 0,
+          "phoneLandingLandscape": 0,
+          "tabPortrait": 0,
+          "tabLandscape": 0,
+          "tabLandingPortrait": 0,
+          "tabLandingLandscape": 0
+        }
+      },
+      "decoration": {
+        "borderRadius": false,
+        "shape": "RECTANGLE"
+      }
+    }
+  ],
+  "images": [
+    {
+      "id": "icon",
+      "xPoint": 190,
+      "yPoint": 60,
+      "width": {
+        "phonePortrait": 40,
+        "phoneLandscape": 40,
+        "phoneLandingPortrait": 40,
+        "phoneLandingLandscape": 40,
+        "tabPortrait": 48,
+        "tabLandscape": 48,
+        "tabLandingPortrait": 48,
+        "tabLandingLandscape": 48
+      },
+      "height": {
+        "phonePortrait": 40,
+        "phoneLandscape": 40,
+        "phoneLandingPortrait": 40,
+        "phoneLandingLandscape": 40,
+        "tabPortrait": 48,
+        "tabLandscape": 48,
+        "tabLandingPortrait": 48,
+        "tabLandingLandscape": 48
+      },
+      "margin": {
+        "marginLeft": {
+          "phonePortrait": 0,
+          "phoneLandscape": 0,
+          "phoneLandingPortrait": 0,
+          "phoneLandingLandscape": 0,
+          "tabPortrait": 0,
+          "tabLandscape": 0,
+          "tabLandingPortrait": 0,
+          "tabLandingLandscape": 0
+        },
+        "marginRight": {
+          "phonePortrait": 0,
+          "phoneLandscape": 0,
+          "phoneLandingPortrait": 0,
+          "phoneLandingLandscape": 0,
+          "tabPortrait": 0,
+          "tabLandscape": 0,
+          "tabLandingPortrait": 0,
+          "tabLandingLandscape": 0
+        },
+        "marginTop": {
+          "phonePortrait": 0,
+          "phoneLandscape": 0,
+          "phoneLandingPortrait": 0,
+          "phoneLandingLandscape": 0,
+          "tabPortrait": 0,
+          "tabLandscape": 0,
+          "tabLandingPortrait": 0,
+          "tabLandingLandscape": 0
+        },
+        "marginBottom": {
+          "phonePortrait": 0,
+          "phoneLandscape": 0,
+          "phoneLandingPortrait": 0,
+          "phoneLandingLandscape": 0,
+          "tabPortrait": 0,
+          "tabLandscape": 0,
+          "tabLandingPortrait": 0,
+          "tabLandingLandscape": 0
+        }
+      }
+    }
+  ]
+}

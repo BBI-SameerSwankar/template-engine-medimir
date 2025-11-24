@@ -1,0 +1,99 @@
+[
+  {
+    "id": "2",
+    "title": "Top Tools Worldwide",
+    "layout_type": "scrolling",
+    "templateId": "topToolsWorldwide",
+    "tiles": [
+      {
+        "texts": [
+          {
+            "text": "Small Complex Tachycardia",
+            "id": "title",
+            "color": "#000000",
+            "textbg": "#ffffff",
+            "decorationbg": "#ffffff"
+          },
+          {
+            "text": "Cardio",
+            "id": "abbr",
+            "color": "#FF3B30",
+            "textbg": "#ffffff",
+            "decorationbg": "#ffffff"
+          },
+          {
+            "text": "CDST",
+            "id": "toolType",
+            "color": "#FF3B30",
+            "textbg": "#ffffff",
+            "decorationbg": "#ffffff"
+          }
+        ],
+        "images": [
+          {
+            "path": "https://www.svgrepo.com/download/445801/heart-health.svg",
+            "id": "icon",
+            "color": "#FF3B30"
+          }
+        ],
+        "border": [
+          {
+            "id": "bottom",
+            "color": "#ffffff"
+          }
+        ],
+        "onClick": {
+          "clickId": "toolClick",
+          "extraParameters": {
+            "toolId": 970
+          }
+        }
+      },
+      {
+        "texts": [
+          {
+            "text": "Deep Venous thrombosis",
+            "id": "title",
+            "color": "#000000",
+            "textbg": "#ffffff",
+            "decorationbg": "#ffffff"
+          },
+          {
+            "text": "Angio",
+            "id": "abbr",
+            "color": "#AF52DE",
+            "textbg": "#ffffff",
+            "decorationbg": "#ffffff"
+          },
+          {
+            "text": "CDST",
+            "id": "toolType",
+            "color": "#AF52DE",
+            "textbg": "#ffffff",
+            "decorationbg": "#ffffff"
+          }
+        ],
+        "images": [
+          {
+            "path": "https://www.svgrepo.com/download/341387/health-medical-healthcare-heart.svg",
+            "id": "icon",
+            "color": "#AF52DE"
+          }
+        ],
+        "border": [
+          {
+            "id": "bottom",
+            "color": "#ffffff"
+          }
+        ],
+        "onClick": {
+          "clickId": "toolClick",
+          "extraParameters": {
+            "toolId": 970
+          }
+        }
+      }
+    ],
+    "position": 2
+  }
+]
