@@ -8,7 +8,7 @@
       {
         "texts": [
           {
-            "text": "Small Complex Tachycardia",
+            "text": "Small Complex \nTachycardia",
             "id": "title",
             "color": "#000000",
             "textbg": "#ffffff",
@@ -31,7 +31,7 @@
         ],
         "images": [
           {
-            "path": "https://www.svgrepo.com/download/445801/heart-health.svg",
+            "path": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdpmC2a2URITZAM0RRd0ZRBMxV7t-_b65tVxEtVoeZnV1g5oC03tOBkgk&s",
             "id": "icon",
             "color": "#FF3B30"
           }
@@ -52,7 +52,7 @@
       {
         "texts": [
           {
-            "text": "Small Complex Tachycardia",
+            "text": "Small Complex \nTachycardia",
             "id": "title",
             "color": "#000000",
             "textbg": "#ffffff",
@@ -75,7 +75,7 @@
         ],
         "images": [
           {
-            "path": "https://www.svgrepo.com/download/445801/heart-health.svg",
+            "path": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdpmC2a2URITZAM0RRd0ZRBMxV7t-_b65tVxEtVoeZnV1g5oC03tOBkgk&s",
             "id": "icon",
             "color": "#FF3B30"
           }
@@ -96,51 +96,7 @@
       {
         "texts": [
           {
-            "text": "Deep Venous thrombosis",
-            "id": "title",
-            "color": "#000000",
-            "textbg": "#ffffff",
-            "decorationbg": "#ffffff"
-          },
-          {
-            "text": "Angio",
-            "id": "abbr",
-            "color": "#AF52DE",
-            "textbg": "#ffffff",
-            "decorationbg": "#ffffff"
-          },
-          {
-            "text": "CDST",
-            "id": "toolType",
-            "color": "#AF52DE",
-            "textbg": "#ffffff",
-            "decorationbg": "#ffffff"
-          }
-        ],
-        "images": [
-          {
-            "path": "https://www.svgrepo.com/download/341387/health-medical-healthcare-heart.svg",
-            "id": "icon",
-            "color": "#AF52DE"
-          }
-        ],
-        "border": [
-          {
-            "id": "bottom",
-            "color": "#ffffff"
-          }
-        ],
-        "onClick": {
-          "clickId": "toolClick",
-          "extraParameters": {
-            "toolId": 970
-          }
-        }
-      },
-      {
-        "texts": [
-          {
-            "text": "Atrial Fibrillation",
+            "text": "Small Complex \nTachycardia",
             "id": "title",
             "color": "#000000",
             "textbg": "#ffffff",
@@ -163,7 +119,7 @@
         ],
         "images": [
           {
-            "path": "https://www.svgrepo.com/download/445801/heart-health.svg",
+            "path": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdpmC2a2URITZAM0RRd0ZRBMxV7t-_b65tVxEtVoeZnV1g5oC03tOBkgk&s",
             "id": "icon",
             "color": "#FF3B30"
           }
@@ -177,10 +133,11 @@
         "onClick": {
           "clickId": "toolClick",
           "extraParameters": {
-            "toolId": 971
+            "toolId": 970
           }
         }
       }
+      
     ],
     "position": 2
   },
@@ -193,7 +150,7 @@
       {
         "texts": [
           {
-            "text": "Body Mass Index Calculator - BMI",
+            "text": "Body Mass Index \nCalculator - BMI",
             "id": "title",
             "color": "#000000",
             "textbg": "#ffffff",
@@ -237,14 +194,14 @@
       {
         "texts": [
           {
-            "text": "MICA Score",
+            "text": "Body Mass Index \nCalculator - BMI",
             "id": "title",
             "color": "#000000",
             "textbg": "#ffffff",
             "decorationbg": "#ffffff"
           },
           {
-            "text": "Score",
+            "text": "Calculator",
             "id": "abbr",
             "color": "#8E8E93",
             "textbg": "#ffffff",
@@ -260,7 +217,7 @@
         ],
         "images": [
           {
-            "path": "https://www.svgrepo.com/download/505614/speedometer.svg",
+            "path": "https://www.svgrepo.com/download/514893/calculator.svg",
             "id": "icon",
             "color": "#007AFF"
           }
@@ -274,39 +231,39 @@
         "onClick": {
           "clickId": "toolClick",
           "extraParameters": {
-            "toolId": 981
+            "toolId": 980
           }
         }
       },
       {
         "texts": [
           {
-            "text": "Perioperative Mgmt. of",
+            "text": "Body Mass Index \nCalculator - BMI",
             "id": "title",
             "color": "#000000",
             "textbg": "#ffffff",
             "decorationbg": "#ffffff"
           },
           {
-            "text": "Anesth",
+            "text": "Calculator",
             "id": "abbr",
-            "color": "#00C27A",
+            "color": "#8E8E93",
             "textbg": "#ffffff",
             "decorationbg": "#ffffff"
           },
           {
-            "text": "CDST",
+            "text": "",
             "id": "toolType",
-            "color": "#00C27A",
+            "color": "#8E8E93",
             "textbg": "#ffffff",
             "decorationbg": "#ffffff"
           }
         ],
         "images": [
           {
-            "path": "https://www.svgrepo.com/download/501632/stethoscope.svg",
+            "path": "https://www.svgrepo.com/download/514893/calculator.svg",
             "id": "icon",
-            "color": "#00C27A"
+            "color": "#007AFF"
           }
         ],
         "border": [
@@ -318,7 +275,7 @@
         "onClick": {
           "clickId": "toolClick",
           "extraParameters": {
-            "toolId": 982
+            "toolId": 980
           }
         }
       }
@@ -334,15 +291,29 @@
       {
         "texts": [
           {
-            "text": "Greymoore,\n Ashton",
-            "id": "name",
+            "text": "Ashton",
+            "id": "firstName",
             "color": "#000000",
             "textbg": "#ffffff",
             "decorationbg": "#ffffff"
           },
           {
-            "text": "M, 44",
-            "id": "demographic",
+            "text": "Greymoore",
+            "id": "lastName",
+            "color": "#000000",
+            "textbg": "#ffffff",
+            "decorationbg": "#ffffff"
+          },
+          {
+            "text": "M",
+            "id": "gender",
+            "color": "#8E8E93",
+            "textbg": "#ffffff",
+            "decorationbg": "#ffffff"
+          },
+          {
+            "text": "44",
+            "id": "age",
             "color": "#8E8E93",
             "textbg": "#ffffff",
             "decorationbg": "#ffffff"
@@ -350,9 +321,9 @@
           {
             "text": "TX",
             "id": "badge1",
-            "color": "#FF9500",
-            "textbg": "#FFE7B3",
-            "decorationbg": "#FFE7B3"
+            "color": "#577BED",
+            "textbg": "#ffffff",
+            "decorationbg": "#ffffff"
           }
         ],
         "images": [
@@ -360,11 +331,6 @@
             "path": "https://www.svgrepo.com/download/527946/user-circle.svg",
             "id": "avatar",
             "color": "#007AFF"
-          },
-          {
-            "path": "https://www.svgrepo.com/download/533530/circle.svg",
-            "id": "status",
-            "color": "#FFD60A"
           }
         ],
         "border": [],
@@ -496,7 +462,7 @@
       {
         "texts": [
           {
-            "text": "IIM Subgroup CC (Myositis)",
+            "text": "IIM Subgroup CC \n(Myositis)",
             "id": "title",
             "color": "#000000",
             "textbg": "#ffffff",

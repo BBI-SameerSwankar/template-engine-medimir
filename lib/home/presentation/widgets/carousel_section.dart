@@ -71,7 +71,7 @@ class CarouselSection extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             padding: const EdgeInsets.only(right: 16),
             itemCount: styledTiles.length,
-            separatorBuilder: (_, __) => const SizedBox(width: 12),
+            separatorBuilder: (_, __) => const SizedBox(width: 8),
             itemBuilder: (context, index) {
               return StyledTileWidget(styledTile: styledTiles[index]);
             },

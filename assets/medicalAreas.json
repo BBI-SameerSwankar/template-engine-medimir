@@ -1,7 +1,7 @@
 {
   "id": "medicalAreas",
   "width": {
-    "phonePortrait": 140,
+    "phonePortrait": 104,
     "phoneLandscape": 140,
     "phoneLandingPortrait": 140,
     "phoneLandingLandscape": 140,
@@ -11,7 +11,7 @@
     "tabLandingLandscape": 160
   },
   "height": {
-    "phonePortrait": 140,
+    "phonePortrait": 104,
     "phoneLandscape": 140,
     "phoneLandingPortrait": 140,
     "phoneLandingLandscape": 140,
@@ -70,10 +70,10 @@
     {
       "id": "title",
       "maxlines": 1,
-      "xPoint": 16,
-      "yPoint": 92,
+      "xPoint": 6,
+      "yPoint": 73,
       "fontsize": {
-        "phonePortrait": 15,
+        "phonePortrait": 13,
         "phoneLandscape": 15,
         "phoneLandingPortrait": 15,
         "phoneLandingLandscape": 15,
@@ -124,8 +124,8 @@
   "images": [
     {
       "id": "icon",
-      "xPoint": 46,
-      "yPoint": 26,
+      "xPoint": 28,
+      "yPoint": 17,
       "width": {
         "phonePortrait": 48,
         "phoneLandscape": 48,
