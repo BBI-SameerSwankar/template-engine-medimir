@@ -1,0 +1,157 @@
+{
+  "id": "medicalAreas",
+  "width": {
+    "phonePortrait": 140,
+    "phoneLandscape": 140,
+    "phoneLandingPortrait": 140,
+    "phoneLandingLandscape": 140,
+    "tabPortrait": 160,
+    "tabLandscape": 160,
+    "tabLandingPortrait": 160,
+    "tabLandingLandscape": 160
+  },
+  "height": {
+    "phonePortrait": 140,
+    "phoneLandscape": 140,
+    "phoneLandingPortrait": 140,
+    "phoneLandingLandscape": 140,
+    "tabPortrait": 150,
+    "tabLandscape": 150,
+    "tabLandingPortrait": 150,
+    "tabLandingLandscape": 150
+  },
+  "borders": {
+    "top": {
+      "color": "#DDDDDD",
+      "phonePortrait": 1,
+      "phoneLandscape": 1,
+      "phoneLandingPortrait": 1,
+      "phoneLandingLandscape": 1,
+      "tabPortrait": 1,
+      "tabLandscape": 1,
+      "tabLandingPortrait": 1,
+      "tabLandingLandscape": 1
+    },
+    "bottom": {
+      "color": "#DDDDDD",
+      "phonePortrait": 1,
+      "phoneLandscape": 1,
+      "phoneLandingPortrait": 1,
+      "phoneLandingLandscape": 1,
+      "tabPortrait": 1,
+      "tabLandscape": 1,
+      "tabLandingPortrait": 1,
+      "tabLandingLandscape": 1
+    },
+    "left": {
+      "color": "#DDDDDD",
+      "phonePortrait": 1,
+      "phoneLandscape": 1,
+      "phoneLandingPortrait": 1,
+      "phoneLandingLandscape": 1,
+      "tabPortrait": 1,
+      "tabLandscape": 1,
+      "tabLandingPortrait": 1,
+      "tabLandingLandscape": 1
+    },
+    "right": {
+      "color": "#DDDDDD",
+      "phonePortrait": 1,
+      "phoneLandscape": 1,
+      "phoneLandingPortrait": 1,
+      "phoneLandingLandscape": 1,
+      "tabPortrait": 1,
+      "tabLandscape": 1,
+      "tabLandingPortrait": 1,
+      "tabLandingLandscape": 1
+    }
+  },
+  "texts": [
+    {
+      "id": "title",
+      "maxlines": 1,
+      "xPoint": 16,
+      "yPoint": 92,
+      "fontsize": {
+        "phonePortrait": 15,
+        "phoneLandscape": 15,
+        "phoneLandingPortrait": 15,
+        "phoneLandingLandscape": 15,
+        "tabPortrait": 16,
+        "tabLandscape": 16,
+        "tabLandingPortrait": 16,
+        "tabLandingLandscape": 16
+      },
+      "fontWeight": "NORMAL",
+      "width": {
+        "phonePortrait": 108,
+        "phoneLandscape": 108,
+        "phoneLandingPortrait": 108,
+        "phoneLandingLandscape": 108,
+        "tabPortrait": 130,
+        "tabLandscape": 130,
+        "tabLandingPortrait": 130,
+        "tabLandingLandscape": 130
+      },
+      "height": {
+        "phonePortrait": 24,
+        "phoneLandscape": 24,
+        "phoneLandingPortrait": 24,
+        "phoneLandingLandscape": 24,
+        "tabPortrait": 26,
+        "tabLandscape": 26,
+        "tabLandingPortrait": 26,
+        "tabLandingLandscape": 26
+      },
+      "padding": {
+        "paddingLeft": { "phonePortrait": 0 },
+        "paddingRight": { "phonePortrait": 0 },
+        "paddingTop": { "phonePortrait": 0 },
+        "paddingBottom": { "phonePortrait": 0 }
+      },
+      "margin": {
+        "marginLeft": { "phonePortrait": 0 },
+        "marginRight": { "phonePortrait": 0 },
+        "marginTop": { "phonePortrait": 0 },
+        "marginBottom": { "phonePortrait": 0 }
+      },
+      "decoration": {
+        "borderRadius": false,
+        "shape": "RECTANGLE"
+      }
+    }
+  ],
+  "images": [
+    {
+      "id": "icon",
+      "xPoint": 46,
+      "yPoint": 26,
+      "width": {
+        "phonePortrait": 48,
+        "phoneLandscape": 48,
+        "phoneLandingPortrait": 48,
+        "phoneLandingLandscape": 48,
+        "tabPortrait": 54,
+        "tabLandscape": 54,
+        "tabLandingPortrait": 54,
+        "tabLandingLandscape": 54
+      },
+      "height": {
+        "phonePortrait": 48,
+        "phoneLandscape": 48,
+        "phoneLandingPortrait": 48,
+        "phoneLandingLandscape": 48,
+        "tabPortrait": 54,
+        "tabLandscape": 54,
+        "tabLandingPortrait": 54,
+        "tabLandingLandscape": 54
+      },
+      "margin": {
+        "marginLeft": { "phonePortrait": 0 },
+        "marginRight": { "phonePortrait": 0 },
+        "marginTop": { "phonePortrait": 0 },
+        "marginBottom": { "phonePortrait": 0 }
+      }
+    }
+  ]
+}

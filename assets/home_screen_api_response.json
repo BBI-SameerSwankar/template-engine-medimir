@@ -52,6 +52,50 @@
       {
         "texts": [
           {
+            "text": "Small Complex Tachycardia",
+            "id": "title",
+            "color": "#000000",
+            "textbg": "#ffffff",
+            "decorationbg": "#ffffff"
+          },
+          {
+            "text": "Cardio",
+            "id": "abbr",
+            "color": "#FF3B30",
+            "textbg": "#ffffff",
+            "decorationbg": "#ffffff"
+          },
+          {
+            "text": "CDST",
+            "id": "toolType",
+            "color": "#FF3B30",
+            "textbg": "#ffffff",
+            "decorationbg": "#ffffff"
+          }
+        ],
+        "images": [
+          {
+            "path": "https://www.svgrepo.com/download/445801/heart-health.svg",
+            "id": "icon",
+            "color": "#FF3B30"
+          }
+        ],
+        "border": [
+          {
+            "id": "bottom",
+            "color": "#ffffff"
+          }
+        ],
+        "onClick": {
+          "clickId": "toolClick",
+          "extraParameters": {
+            "toolId": 970
+          }
+        }
+      },
+      {
+        "texts": [
+          {
             "text": "Deep Venous thrombosis",
             "id": "title",
             "color": "#000000",
@@ -92,8 +136,460 @@
             "toolId": 970
           }
         }
+      },
+      {
+        "texts": [
+          {
+            "text": "Atrial Fibrillation",
+            "id": "title",
+            "color": "#000000",
+            "textbg": "#ffffff",
+            "decorationbg": "#ffffff"
+          },
+          {
+            "text": "Cardio",
+            "id": "abbr",
+            "color": "#FF3B30",
+            "textbg": "#ffffff",
+            "decorationbg": "#ffffff"
+          },
+          {
+            "text": "CDST",
+            "id": "toolType",
+            "color": "#FF3B30",
+            "textbg": "#ffffff",
+            "decorationbg": "#ffffff"
+          }
+        ],
+        "images": [
+          {
+            "path": "https://www.svgrepo.com/download/445801/heart-health.svg",
+            "id": "icon",
+            "color": "#FF3B30"
+          }
+        ],
+        "border": [
+          {
+            "id": "bottom",
+            "color": "#ffffff"
+          }
+        ],
+        "onClick": {
+          "clickId": "toolClick",
+          "extraParameters": {
+            "toolId": 971
+          }
+        }
       }
     ],
     "position": 2
+  },
+  {
+    "id": "3",
+    "title": "Last Seen Tools",
+    "layout_type": "scrolling",
+    "templateId": "lastSeenTools",
+    "tiles": [
+      {
+        "texts": [
+          {
+            "text": "Body Mass Index Calculator - BMI",
+            "id": "title",
+            "color": "#000000",
+            "textbg": "#ffffff",
+            "decorationbg": "#ffffff"
+          },
+          {
+            "text": "Calculator",
+            "id": "abbr",
+            "color": "#8E8E93",
+            "textbg": "#ffffff",
+            "decorationbg": "#ffffff"
+          },
+          {
+            "text": "",
+            "id": "toolType",
+            "color": "#8E8E93",
+            "textbg": "#ffffff",
+            "decorationbg": "#ffffff"
+          }
+        ],
+        "images": [
+          {
+            "path": "https://www.svgrepo.com/download/514893/calculator.svg",
+            "id": "icon",
+            "color": "#007AFF"
+          }
+        ],
+        "border": [
+          {
+            "id": "bottom",
+            "color": "#ffffff"
+          }
+        ],
+        "onClick": {
+          "clickId": "toolClick",
+          "extraParameters": {
+            "toolId": 980
+          }
+        }
+      },
+      {
+        "texts": [
+          {
+            "text": "MICA Score",
+            "id": "title",
+            "color": "#000000",
+            "textbg": "#ffffff",
+            "decorationbg": "#ffffff"
+          },
+          {
+            "text": "Score",
+            "id": "abbr",
+            "color": "#8E8E93",
+            "textbg": "#ffffff",
+            "decorationbg": "#ffffff"
+          },
+          {
+            "text": "",
+            "id": "toolType",
+            "color": "#8E8E93",
+            "textbg": "#ffffff",
+            "decorationbg": "#ffffff"
+          }
+        ],
+        "images": [
+          {
+            "path": "https://www.svgrepo.com/download/505614/speedometer.svg",
+            "id": "icon",
+            "color": "#007AFF"
+          }
+        ],
+        "border": [
+          {
+            "id": "bottom",
+            "color": "#ffffff"
+          }
+        ],
+        "onClick": {
+          "clickId": "toolClick",
+          "extraParameters": {
+            "toolId": 981
+          }
+        }
+      },
+      {
+        "texts": [
+          {
+            "text": "Perioperative Mgmt. of",
+            "id": "title",
+            "color": "#000000",
+            "textbg": "#ffffff",
+            "decorationbg": "#ffffff"
+          },
+          {
+            "text": "Anesth",
+            "id": "abbr",
+            "color": "#00C27A",
+            "textbg": "#ffffff",
+            "decorationbg": "#ffffff"
+          },
+          {
+            "text": "CDST",
+            "id": "toolType",
+            "color": "#00C27A",
+            "textbg": "#ffffff",
+            "decorationbg": "#ffffff"
+          }
+        ],
+        "images": [
+          {
+            "path": "https://www.svgrepo.com/download/501632/stethoscope.svg",
+            "id": "icon",
+            "color": "#00C27A"
+          }
+        ],
+        "border": [
+          {
+            "id": "bottom",
+            "color": "#ffffff"
+          }
+        ],
+        "onClick": {
+          "clickId": "toolClick",
+          "extraParameters": {
+            "toolId": 982
+          }
+        }
+      }
+    ],
+    "position": 3
+  },
+  {
+    "id": "4",
+    "title": "Last Seen Patients",
+    "layout_type": "scrolling",
+    "templateId": "lastSeenPatients",
+    "tiles": [
+      {
+        "texts": [
+          {
+            "text": "Greymoore,\n Ashton",
+            "id": "name",
+            "color": "#000000",
+            "textbg": "#ffffff",
+            "decorationbg": "#ffffff"
+          },
+          {
+            "text": "M, 44",
+            "id": "demographic",
+            "color": "#8E8E93",
+            "textbg": "#ffffff",
+            "decorationbg": "#ffffff"
+          },
+          {
+            "text": "TX",
+            "id": "badge1",
+            "color": "#FF9500",
+            "textbg": "#FFE7B3",
+            "decorationbg": "#FFE7B3"
+          }
+        ],
+        "images": [
+          {
+            "path": "https://www.svgrepo.com/download/527946/user-circle.svg",
+            "id": "avatar",
+            "color": "#007AFF"
+          },
+          {
+            "path": "https://www.svgrepo.com/download/533530/circle.svg",
+            "id": "status",
+            "color": "#FFD60A"
+          }
+        ],
+        "border": [],
+        "onClick": {
+          "clickId": "patientClick",
+          "extraParameters": {
+            "toolId": 1001
+          }
+        }
+      }
+    ],
+    "position": 4
+  },
+  {
+    "id": "5",
+    "title": "Medical Areas",
+    "layout_type": "scrolling",
+    "templateId": "medicalAreas",
+    "tiles": [
+      {
+        "texts": [
+          {
+            "text": "Anesthesiology",
+            "id": "title",
+            "color": "#000000",
+            "textbg": "#ffffff",
+            "decorationbg": "#ffffff"
+          }
+        ],
+        "images": [
+          {
+            "path": "https://www.svgrepo.com/download/500872/sleep.svg",
+            "id": "icon",
+            "color": "#00C27A"
+          }
+        ],
+        "border": [],
+        "onClick": {
+          "clickId": "medicalAreaClick",
+          "extraParameters": {
+            "medicalAreaId": 1
+          }
+        }
+      },
+      {
+        "texts": [
+          {
+            "text": "Angiology",
+            "id": "title",
+            "color": "#000000",
+            "textbg": "#ffffff",
+            "decorationbg": "#ffffff"
+          }
+        ],
+        "images": [
+          {
+            "path": "https://www.svgrepo.com/download/341387/health-medical-healthcare-heart.svg",
+            "id": "icon",
+            "color": "#AF52DE"
+          }
+        ],
+        "border": [],
+        "onClick": {
+          "clickId": "medicalAreaClick",
+          "extraParameters": {
+            "medicalAreaId": 2
+          }
+        }
+      },
+      {
+        "texts": [
+          {
+            "text": "Cardiology",
+            "id": "title",
+            "color": "#000000",
+            "textbg": "#ffffff",
+            "decorationbg": "#ffffff"
+          }
+        ],
+        "images": [
+          {
+            "path": "https://www.svgrepo.com/download/445801/heart-health.svg",
+            "id": "icon",
+            "color": "#FF3B30"
+          }
+        ],
+        "border": [],
+        "onClick": {
+          "clickId": "medicalAreaClick",
+          "extraParameters": {
+            "medicalAreaId": 3
+          }
+        }
+      },
+      {
+        "texts": [
+          {
+            "text": "Dermatology",
+            "id": "title",
+            "color": "#000000",
+            "textbg": "#ffffff",
+            "decorationbg": "#ffffff"
+          }
+        ],
+        "images": [
+          {
+            "path": "https://www.svgrepo.com/download/484786/bandage.svg",
+            "id": "icon",
+            "color": "#FF9500"
+          }
+        ],
+        "border": [],
+        "onClick": {
+          "clickId": "medicalAreaClick",
+          "extraParameters": {
+            "medicalAreaId": 4
+          }
+        }
+      }
+    ],
+    "position": 5
+  },
+  {
+    "id": "6",
+    "title": "Scores",
+    "layout_type": "scrolling",
+    "templateId": "scores",
+    "tiles": [
+      {
+        "texts": [
+          {
+            "text": "IIM Subgroup CC (Myositis)",
+            "id": "title",
+            "color": "#000000",
+            "textbg": "#ffffff",
+            "decorationbg": "#ffffff"
+          },
+          {
+            "text": "Score",
+            "id": "abbr",
+            "color": "#8E8E93",
+            "textbg": "#ffffff",
+            "decorationbg": "#ffffff"
+          }
+        ],
+        "images": [
+          {
+            "path": "https://www.svgrepo.com/download/505614/speedometer.svg",
+            "id": "icon",
+            "color": "#007AFF"
+          }
+        ],
+        "border": [],
+        "onClick": {
+          "clickId": "toolClick",
+          "extraParameters": {
+            "toolId": 1101
+          }
+        }
+      },
+      {
+        "texts": [
+          {
+            "text": "ARISCAT Score",
+            "id": "title",
+            "color": "#000000",
+            "textbg": "#ffffff",
+            "decorationbg": "#ffffff"
+          },
+          {
+            "text": "Score",
+            "id": "abbr",
+            "color": "#8E8E93",
+            "textbg": "#ffffff",
+            "decorationbg": "#ffffff"
+          }
+        ],
+        "images": [
+          {
+            "path": "https://www.svgrepo.com/download/505614/speedometer.svg",
+            "id": "icon",
+            "color": "#007AFF"
+          }
+        ],
+        "border": [],
+        "onClick": {
+          "clickId": "toolClick",
+          "extraParameters": {
+            "toolId": 1102
+          }
+        }
+      },
+      {
+        "texts": [
+          {
+            "text": "CHA2DS2-VASc",
+            "id": "title",
+            "color": "#000000",
+            "textbg": "#ffffff",
+            "decorationbg": "#ffffff"
+          },
+          {
+            "text": "Score",
+            "id": "abbr",
+            "color": "#8E8E93",
+            "textbg": "#ffffff",
+            "decorationbg": "#ffffff"
+          }
+        ],
+        "images": [
+          {
+            "path": "https://www.svgrepo.com/download/505614/speedometer.svg",
+            "id": "icon",
+            "color": "#007AFF"
+          }
+        ],
+        "border": [],
+        "onClick": {
+          "clickId": "toolClick",
+          "extraParameters": {
+            "toolId": 1103
+          }
+        }
+      }
+    ],
+    "position": 6
   }
 ]

@@ -56,15 +56,16 @@ class StyledTileWidget extends StatelessWidget {
     var clean = hex.toUpperCase().replaceAll('#', '');
     if (clean.length == 6) clean = 'FF$clean';
     return Color(int.parse(clean, radix: 16));
-    }
+  }
 
   FontWeight _mapFontWeight(String? w) {
-    if (w == null) return FontWeight.w600; // your old default
+    if (w == null) return FontWeight.w400;
     final upper = w.toUpperCase();
+
     if (upper.contains('BOLD')) return FontWeight.w700;
     if (upper.contains('MEDIUM')) return FontWeight.w500;
     if (upper.contains('LIGHT')) return FontWeight.w300;
-    return FontWeight.w400;
+    return FontWeight.w400; // NORMAL / default
   }
 
   void _handleClick(BuildContext context, TileClickAction action) {
@@ -83,22 +84,29 @@ class StyledTileWidget extends StatelessWidget {
     );
   }
 
-  // Applies template borders to the tile container.
+  // Uses template borders (top/left/right/bottom) to draw the card outline.
   Border _buildBorder(BuildContext context) {
     final borders = styledTile.template.borders;
-    if (borders.isEmpty) return Border.all(color: Colors.transparent, width: 0);
+    if (borders.isEmpty) {
+      // Default to a light grey outline similar to the screenshot.
+      return Border.all(color: Colors.grey.shade300, width: 1);
+    }
 
     BorderSide sideFor(TemplateBorderConfig cfg) {
       final thickness = _resolveDimension(context, cfg.thickness);
-      final color = _parseHexColor(cfg.color ?? "", fallback: Colors.transparent);
+      final color =
+          _parseHexColor(cfg.color ?? "", fallback: Colors.grey.shade300);
       return BorderSide(color: color, width: thickness.toDouble());
     }
 
     return Border(
       top: borders['top'] != null ? sideFor(borders['top']!) : BorderSide.none,
-      bottom: borders['bottom'] != null ? sideFor(borders['bottom']!) : BorderSide.none,
-      left: borders['left'] != null ? sideFor(borders['left']!) : BorderSide.none,
-      right: borders['right'] != null ? sideFor(borders['right']!) : BorderSide.none,
+      bottom:
+          borders['bottom'] != null ? sideFor(borders['bottom']!) : BorderSide.none,
+      left:
+          borders['left'] != null ? sideFor(borders['left']!) : BorderSide.none,
+      right:
+          borders['right'] != null ? sideFor(borders['right']!) : BorderSide.none,
     );
   }
 
@@ -107,6 +115,7 @@ class StyledTileWidget extends StatelessWidget {
     final template = styledTile.template;
     final tile = styledTile.tile;
 
+    // Card dimensions from template JSON
     final resolvedWidth = template.width != null
         ? _resolveDimension(context, template.width!)
         : 260.0;
@@ -119,7 +128,7 @@ class StyledTileWidget extends StatelessWidget {
 
     final children = <Widget>[];
 
-    // ----- Texts -----
+    // ----- TEXTS -----
     for (final TemplateTextConfig textConfig in template.texts) {
       final textModel = _findText(textConfig.id);
       if (textModel == null) continue;
@@ -136,7 +145,6 @@ class StyledTileWidget extends StatelessWidget {
           ? _resolveDimension(context, textConfig.height!)
           : null;
 
-      // margin offsets
       final marginLeft = textConfig.margin != null
           ? _resolveDimension(context, textConfig.margin!.left)
           : 0.0;
@@ -144,7 +152,6 @@ class StyledTileWidget extends StatelessWidget {
           ? _resolveDimension(context, textConfig.margin!.top)
           : 0.0;
 
-      // padding inside text container
       final padLeft = textConfig.padding != null
           ? _resolveDimension(context, textConfig.padding!.left)
           : 0.0;
@@ -169,11 +176,10 @@ class StyledTileWidget extends StatelessWidget {
           fontSize: fontSize,
           fontWeight: _mapFontWeight(textConfig.fontWeight),
           color: _parseHexColor(textModel.color, fallback: Colors.black),
-          height: 1.2, // mild control to avoid crowding
+          height: 1.2,
         ),
       );
 
-      // decoration wrapper (if JSON says borderRadius true)
       if (textConfig.decoration.borderRadius) {
         textChild = Container(
           decoration: BoxDecoration(
@@ -201,9 +207,10 @@ class StyledTileWidget extends StatelessWidget {
           ),
         ),
       );
+      var temp = children;
     }
 
-    // ----- Images -----
+    // ----- IMAGES -----
     for (final TemplateImageConfig imageConfig in template.images) {
       final imageModel = _findImage(imageConfig.id);
       if (imageModel == null) continue;
@@ -215,7 +222,6 @@ class StyledTileWidget extends StatelessWidget {
           ? _resolveDimension(context, imageConfig.height!)
           : 40.0;
 
-      // margin offsets for images
       final marginLeft = imageConfig.margin != null
           ? _resolveDimension(context, imageConfig.margin!.left)
           : 0.0;
@@ -247,19 +253,13 @@ class StyledTileWidget extends StatelessWidget {
       onTap: () => _handleClick(context, tile.onClick),
       child: Container(
         width: tileWidth,
-        height: tileHeight,
-        padding: const EdgeInsets.all(8),
+        // height: tileHeight,
+        // No internal padding so JSON positions (xPoint/yPoint) are exact
         decoration: BoxDecoration(
           color: Colors.white,
+        // color: Colors.pink,
           borderRadius: BorderRadius.circular(12),
           border: border,
-          boxShadow: const [
-            BoxShadow(
-              blurRadius: 6,
-              spreadRadius: 1,
-              offset: Offset(0, 2),
-            ),
-          ],
         ),
         child: Stack(
           clipBehavior: Clip.none,

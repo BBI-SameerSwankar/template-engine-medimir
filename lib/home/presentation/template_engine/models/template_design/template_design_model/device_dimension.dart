@@ -23,7 +23,7 @@ class DeviceDimension {
   factory DeviceDimension.fromJson(Map<String, dynamic> json) {
     return DeviceDimension(
       phonePortrait: json['phonePortrait'] as num,
-      phoneLandscape: json['phoneLandscape'] as num,
+      phoneLandscape: json['phoneLandscape'] ?? 0,
       phoneLandingPortrait: json['phoneLandingPortrait'] as num?,
       phoneLandingLandscape: json['phoneLandingLandscape'] as num?,
       tabPortrait: json['tabPortrait'] as num?,
@@ -36,7 +36,7 @@ class DeviceDimension {
   Map<String, num> toJson() {
     final map = <String, num>{
       'phonePortrait': phonePortrait,
-      'phoneLandscape': phoneLandscape,
+      'phoneLandscape': phoneLandscape ?? 0,
     };
 
     if (phoneLandingPortrait != null) {

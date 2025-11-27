@@ -20,3 +20,7 @@ flutter:
   assets:
     - assets/home_screen_api_response.json
     - assets/topToolsWorldwide.json
+    - assets/lastSeenTools.json
+    - assets/lastSeenPatients.json
+    - assets/medicalAreas.json
+    - assets/scores.json

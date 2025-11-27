@@ -9,6 +9,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xFFF2F2F7), // iOS-style system grouped bg
       appBar: AppBar(
         title: const Text('Dynamic Home Carousels'),
       ),
