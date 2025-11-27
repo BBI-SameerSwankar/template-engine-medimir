@@ -110,6 +110,19 @@ class StyledTileWidget extends StatelessWidget {
     );
   }
 
+  TextAlign _mapTextAlign(String? raw) {
+    if (raw == null) return TextAlign.start;
+    final v = raw.toString().toUpperCase();
+
+    if (v == 'CENTER') return TextAlign.center;
+    if (v == 'RIGHT' || v == 'END') return TextAlign.end;
+    if (v == 'LEFT' || v == 'START') return TextAlign.start;
+
+    // default / unknown
+    return TextAlign.start;
+  }
+
+
   @override
   Widget build(BuildContext context) {
     final template = styledTile.template;
@@ -170,8 +183,10 @@ class StyledTileWidget extends StatelessWidget {
 
       Widget textChild = Text(
         textModel.text,
-        maxLines: textConfig.maxLines,
-        overflow: TextOverflow.ellipsis,
+        softWrap: true,  
+        maxLines: null,
+        overflow: TextOverflow.visible,
+        textAlign: _mapTextAlign(textConfig.textAlignRaw),
         style: TextStyle(
           fontSize: fontSize,
           fontWeight: _mapFontWeight(textConfig.fontWeight),

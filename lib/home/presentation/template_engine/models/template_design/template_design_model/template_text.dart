@@ -9,7 +9,7 @@ class TemplateTextConfig {
   final int yPoint;
 
   final DeviceDimension? fontSize;
-  final String? fontWeight; // "NORMAL" / "BOLD" / etc.
+  final String? fontWeight;
 
   final DeviceDimension? width;
   final DeviceDimension? height;
@@ -18,6 +18,9 @@ class TemplateTextConfig {
   final TemplateEdgeInsetsConfig? margin;
 
   final TemplateTextDecorationConfig decoration;
+
+  // 👇 NEW
+  final String? textAlignRaw;
 
   TemplateTextConfig({
     required this.id,
@@ -31,6 +34,7 @@ class TemplateTextConfig {
     required this.padding,
     required this.margin,
     required this.decoration,
+    this.textAlignRaw,
   });
 
   factory TemplateTextConfig.fromJson(Map<String, dynamic> json) {
@@ -64,6 +68,7 @@ class TemplateTextConfig {
       decoration: TemplateTextDecorationConfig.fromJson(
         (json['decoration'] as Map?)?.cast<String, dynamic>(),
       ),
+      textAlignRaw: json['textAlign'] as String?, // 👈 NEW
     );
   }
 }

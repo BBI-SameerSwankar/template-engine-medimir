@@ -84,7 +84,7 @@
       },
       "fontWeight": "NORMAL",
       "width": {
-        "phonePortrait": 220,
+        "phonePortrait": 120,
         "phoneLandscape": 220,
         "phoneLandingPortrait": 220,
         "phoneLandingLandscape": 220,
