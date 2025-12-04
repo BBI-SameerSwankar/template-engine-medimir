@@ -16,4 +16,12 @@ class CarouselImage {
       color: (json['color'] ?? '') as String,
     );
   }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'path': path,
+      'id': id,
+      'color': color,
+    };
+  }
 }

@@ -15,4 +15,11 @@ class TileClickAction {
       extraParameters: ExtraParameters.fromJson(json["extraParameters"]),
     );
   }
+
+  Map<String, dynamic> toJson() {
+    return {
+      "clickId": clickId,
+      "extraParameters": extraParameters.toJson(),
+    };
+  }
 }

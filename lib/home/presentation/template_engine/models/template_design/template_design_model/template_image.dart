@@ -6,11 +6,14 @@ class TemplateImageConfig {
   final String id;
   final int xPoint;
   final int yPoint;
-  final DeviceDimension? width;
-  final DeviceDimension? height;
-  final TemplateEdgeInsetsConfig? margin;
 
-  TemplateImageConfig({
+  final DeviceDimension width;
+
+  final DeviceDimension height;
+
+  final TemplateEdgeInsetsConfig margin;
+
+  const TemplateImageConfig({
     required this.id,
     required this.xPoint,
     required this.yPoint,
@@ -20,24 +23,68 @@ class TemplateImageConfig {
   });
 
   factory TemplateImageConfig.fromJson(Map<String, dynamic> json) {
-    DeviceDimension? _maybeDim(String key) {
+    const dimFallback = {
+      "phonePortrait": 0,
+      "phoneLandscape": 0,
+    };
+
+    const edgeFallback = {
+      "left": dimFallback,
+      "right": dimFallback,
+      "top": dimFallback,
+      "bottom": dimFallback,
+    };
+
+    DeviceDimension _dim(String key) {
       final raw = json[key];
-      if (raw == null) return null;
-      return DeviceDimension.fromJson((raw as Map).cast<String, dynamic>());
+      if (raw is! Map) return DeviceDimension.fromJson(dimFallback);
+
+      if (raw.keys.any((k) => k is! String)) {
+        return DeviceDimension.fromJson(dimFallback);
+      }
+
+      return DeviceDimension.fromJson(raw.cast<String, dynamic>());
+    }
+
+    TemplateEdgeInsetsConfig _margin() {
+      final raw = json['margin'];
+
+      if (raw is! Map) {
+        return TemplateEdgeInsetsConfig.fromJson(null);
+      }
+
+      if (raw.keys.any((k) => k is! String)) {
+        return TemplateEdgeInsetsConfig.fromJson(null);
+      }
+
+      return TemplateEdgeInsetsConfig.fromJson(
+        raw.cast<String, dynamic>(),
+      );
     }
 
     return TemplateImageConfig(
-      id: json['id'] as String,
-      xPoint: json['xPoint'] as int,
-      yPoint: json['yPoint'] as int,
-      width: _maybeDim('width'),
-      height: _maybeDim('height'),
-      margin: json['margin'] != null
-          ? TemplateEdgeInsetsConfig.fromJson(
-              (json['margin'] as Map).cast<String, dynamic>(),
-              isPadding: false, // margin block uses marginLeft/... keys
-            )
-          : null,
+      id: json['id'] as String? ?? '',
+      xPoint: json['xPoint'] as int? ?? 0,
+      yPoint: json['yPoint'] as int? ?? 0,
+      width: _dim('width'),
+      height: _dim('height'),
+      margin: _margin(),
     );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+      'xPoint': xPoint,
+      'yPoint': yPoint,
+      'width': width.toJson(),
+      'height': height.toJson(),
+      'margin': {
+        'left': margin.left.toJson(),
+        'right': margin.right.toJson(),
+        'top': margin.top.toJson(),
+        'bottom': margin.bottom.toJson(),
+      },
+    };
   }
 }

@@ -13,25 +13,35 @@ class TemplateEdgeInsetsConfig {
     required this.bottom,
   });
 
-  factory TemplateEdgeInsetsConfig.fromJson(Map<String, dynamic>? json,
-      {required bool isPadding}) {
-    // padding uses nested keys: paddingLeft, paddingRight, ...
-    // margin uses nested keys: marginLeft, marginRight, ...
-    final prefix = isPadding ? "padding" : "margin";
-
+  factory TemplateEdgeInsetsConfig.fromJson(Map<String, dynamic>? json) {
     DeviceDimension _dim(String key) {
-      final map = (json?[key] as Map?)?.cast<String, dynamic>() ?? {
-        "phonePortrait": 0,
-        "phoneLandscape": 0,
-      };
-      return DeviceDimension.fromJson(map);
+      const fallback = {"phonePortrait": 0, "phoneLandscape": 0};
+
+      final raw = json?[key];
+      if (raw is! Map) return DeviceDimension.fromJson(fallback);
+
+      // accept only String keys
+      if (raw.keys.any((k) => k is! String)) {
+        return DeviceDimension.fromJson(fallback);
+      }
+
+      return DeviceDimension.fromJson(raw.cast<String, dynamic>());
     }
 
     return TemplateEdgeInsetsConfig(
-      left: _dim("${prefix}Left"),
-      right: _dim("${prefix}Right"),
-      top: _dim("${prefix}Top"),
-      bottom: _dim("${prefix}Bottom"),
+      left: _dim("left"),
+      right: _dim("right"),
+      top: _dim("top"),
+      bottom: _dim("bottom"),
     );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      "left": left.toJson(),
+      "right": right.toJson(),
+      "top": top.toJson(),
+      "bottom": bottom.toJson(),
+    };
   }
 }

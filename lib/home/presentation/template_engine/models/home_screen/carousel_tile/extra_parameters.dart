@@ -13,7 +13,15 @@ class ExtraParameters {
     return ExtraParameters(
       toolId: json['toolId'] as int?,
       medicalAreaId: json['medicalAreaId'] as int?,
-      newsId: json['newId'] as int?,
+      newsId: json['newsId'] as int?, // <-- fixed key
     );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'toolId': toolId,
+      'medicalAreaId': medicalAreaId,
+      'newsId': newsId,
+    };
   }
 }

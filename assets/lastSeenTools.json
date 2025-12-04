@@ -23,47 +23,55 @@
   "borders": {
     "top": {
       "color": "#DDDDDD",
-      "phonePortrait": 1,
-      "phoneLandscape": 1,
-      "phoneLandingPortrait": 1,
-      "phoneLandingLandscape": 1,
-      "tabPortrait": 1,
-      "tabLandscape": 1,
-      "tabLandingPortrait": 1,
-      "tabLandingLandscape": 1
+      "thickness": {
+        "phonePortrait": 1,
+        "phoneLandscape": 1,
+        "phoneLandingPortrait": 1,
+        "phoneLandingLandscape": 1,
+        "tabPortrait": 1,
+        "tabLandscape": 1,
+        "tabLandingPortrait": 1,
+        "tabLandingLandscape": 1
+      }
     },
     "bottom": {
       "color": "#DDDDDD",
-      "phonePortrait": 1,
-      "phoneLandscape": 1,
-      "phoneLandingPortrait": 1,
-      "phoneLandingLandscape": 1,
-      "tabPortrait": 1,
-      "tabLandscape": 1,
-      "tabLandingPortrait": 1,
-      "tabLandingLandscape": 1
+      "thickness": {
+        "phonePortrait": 1,
+        "phoneLandscape": 1,
+        "phoneLandingPortrait": 1,
+        "phoneLandingLandscape": 1,
+        "tabPortrait": 1,
+        "tabLandscape": 1,
+        "tabLandingPortrait": 1,
+        "tabLandingLandscape": 1
+      }
     },
     "left": {
       "color": "#DDDDDD",
-      "phonePortrait": 1,
-      "phoneLandscape": 1,
-      "phoneLandingPortrait": 1,
-      "phoneLandingLandscape": 1,
-      "tabPortrait": 1,
-      "tabLandscape": 1,
-      "tabLandingPortrait": 1,
-      "tabLandingLandscape": 1
+      "thickness": {
+        "phonePortrait": 1,
+        "phoneLandscape": 1,
+        "phoneLandingPortrait": 1,
+        "phoneLandingLandscape": 1,
+        "tabPortrait": 1,
+        "tabLandscape": 1,
+        "tabLandingPortrait": 1,
+        "tabLandingLandscape": 1
+      }
     },
     "right": {
       "color": "#DDDDDD",
-      "phonePortrait": 1,
-      "phoneLandscape": 1,
-      "phoneLandingPortrait": 1,
-      "phoneLandingLandscape": 1,
-      "tabPortrait": 1,
-      "tabLandscape": 1,
-      "tabLandingPortrait": 1,
-      "tabLandingLandscape": 1
+      "thickness": {
+        "phonePortrait": 1,
+        "phoneLandscape": 1,
+        "phoneLandingPortrait": 1,
+        "phoneLandingLandscape": 1,
+        "tabPortrait": 1,
+        "tabLandscape": 1,
+        "tabLandingPortrait": 1,
+        "tabLandingLandscape": 1
+      }
     }
   },
   "texts": [
@@ -104,7 +112,7 @@
         "tabLandingLandscape": 48
       },
       "padding": {
-        "paddingLeft": {
+        "left": {
           "phonePortrait": 0,
           "phoneLandscape": 0,
           "phoneLandingPortrait": 0,
@@ -114,7 +122,7 @@
           "tabLandingPortrait": 0,
           "tabLandingLandscape": 0
         },
-        "paddingRight": {
+        "right": {
           "phonePortrait": 0,
           "phoneLandscape": 0,
           "phoneLandingPortrait": 0,
@@ -124,7 +132,7 @@
           "tabLandingPortrait": 0,
           "tabLandingLandscape": 0
         },
-        "paddingTop": {
+        "top": {
           "phonePortrait": 0,
           "phoneLandscape": 0,
           "phoneLandingPortrait": 0,
@@ -134,7 +142,7 @@
           "tabLandingPortrait": 0,
           "tabLandingLandscape": 0
         },
-        "paddingBottom": {
+        "bottom": {
           "phonePortrait": 0,
           "phoneLandscape": 0,
           "phoneLandingPortrait": 0,
@@ -146,7 +154,7 @@
         }
       },
       "margin": {
-        "marginLeft": {
+        "left": {
           "phonePortrait": 0,
           "phoneLandscape": 0,
           "phoneLandingPortrait": 0,
@@ -156,7 +164,7 @@
           "tabLandingPortrait": 0,
           "tabLandingLandscape": 0
         },
-        "marginRight": {
+        "right": {
           "phonePortrait": 0,
           "phoneLandscape": 0,
           "phoneLandingPortrait": 0,
@@ -166,7 +174,7 @@
           "tabLandingPortrait": 0,
           "tabLandingLandscape": 0
         },
-        "marginTop": {
+        "top": {
           "phonePortrait": 0,
           "phoneLandscape": 0,
           "phoneLandingPortrait": 0,
@@ -176,7 +184,7 @@
           "tabLandingPortrait": 0,
           "tabLandingLandscape": 0
         },
-        "marginBottom": {
+        "bottom": {
           "phonePortrait": 0,
           "phoneLandscape": 0,
           "phoneLandingPortrait": 0,
@@ -228,8 +236,34 @@
         "tabLandingPortrait": 20,
         "tabLandingLandscape": 20
       },
-      "padding": { "paddingLeft": { "phonePortrait": 0 }, "paddingRight": { "phonePortrait": 0 }, "paddingTop": { "phonePortrait": 0 }, "paddingBottom": { "phonePortrait": 0 } },
-      "margin": { "marginLeft": { "phonePortrait": 0 }, "marginRight": { "phonePortrait": 0 }, "marginTop": { "phonePortrait": 0 }, "marginBottom": { "phonePortrait": 0 } },
+      "padding": {
+        "left": {
+          "phonePortrait": 0
+        },
+        "right": {
+          "phonePortrait": 0
+        },
+        "top": {
+          "phonePortrait": 0
+        },
+        "bottom": {
+          "phonePortrait": 0
+        }
+      },
+      "margin": {
+        "left": {
+          "phonePortrait": 0
+        },
+        "right": {
+          "phonePortrait": 0
+        },
+        "top": {
+          "phonePortrait": 0
+        },
+        "bottom": {
+          "phonePortrait": 0
+        }
+      },
       "decoration": {
         "borderRadius": false,
         "shape": "RECTANGLE"
@@ -262,10 +296,18 @@
         "tabLandingLandscape": 48
       },
       "margin": {
-        "marginLeft": { "phonePortrait": 0 },
-        "marginRight": { "phonePortrait": 0 },
-        "marginTop": { "phonePortrait": 0 },
-        "marginBottom": { "phonePortrait": 0 }
+        "left": {
+          "phonePortrait": 0
+        },
+        "right": {
+          "phonePortrait": 0
+        },
+        "top": {
+          "phonePortrait": 0
+        },
+        "bottom": {
+          "phonePortrait": 0
+        }
       }
     }
   ]

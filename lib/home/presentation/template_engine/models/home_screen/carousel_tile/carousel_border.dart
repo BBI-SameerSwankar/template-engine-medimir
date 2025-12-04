@@ -13,4 +13,11 @@ class CarouselBorder {
       color: (json['color'] ?? '') as String,
     );
   }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+      'color': color,
+    };
+  }
 }

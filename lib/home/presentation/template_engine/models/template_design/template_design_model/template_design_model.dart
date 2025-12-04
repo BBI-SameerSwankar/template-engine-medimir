@@ -5,11 +5,12 @@ import 'template_border.dart';
 import 'template_image.dart';
 import 'template_text.dart';
 
-
 class TemplateDesignModel {
   final String id;
-  final DeviceDimension? width;
-  final DeviceDimension? height;
+
+  final DeviceDimension width;
+  final DeviceDimension height;
+
   final Map<String, TemplateBorderConfig> borders;
   final List<TemplateTextConfig> texts;
   final List<TemplateImageConfig> images;
@@ -28,21 +29,24 @@ class TemplateDesignModel {
   }
 
   factory TemplateDesignModel.fromJson(Map<String, dynamic> json) {
-    final bordersJson =
-        (json['borders'] ?? {}) as Map<String, dynamic>;
+    final bordersJson = (json['borders'] ?? {}) as Map<String, dynamic>;
+
+    final widthJson = json['width'];
+    final heightJson = json['height'];
+
+    if (widthJson == null) {
+      throw FormatException(
+          "TemplateDesignModel: 'width' is required but was null/missing.");
+    }
+    if (heightJson == null) {
+      throw FormatException(
+          "TemplateDesignModel: 'height' is required but was null/missing.");
+    }
 
     return TemplateDesignModel(
       id: json['id'] as String,
-      width: json['width'] != null
-          ? DeviceDimension.fromJson(
-              json['width'] as Map<String, dynamic>,
-            )
-          : null,
-      height: json['height'] != null
-          ? DeviceDimension.fromJson(
-              json['height'] as Map<String, dynamic>,
-            )
-          : null,
+      width: DeviceDimension.fromJson(widthJson as Map<String, dynamic>),
+      height: DeviceDimension.fromJson(heightJson as Map<String, dynamic>),
       borders: bordersJson.map(
         (key, value) => MapEntry(
           key,
@@ -60,4 +64,17 @@ class TemplateDesignModel {
           .toList(),
     );
   }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+      'width': width.toJson(),
+      'height': height.toJson(),
+      'borders': borders.map((key, value) => MapEntry(key, value.toJson())),
+      'texts': texts.map((e) => e.toJson()).toList(),
+      'images': images.map((e) => e.toJson()).toList(),
+    };
+  }
+
+  String toJsonString() => json.encode(toJson());
 }

@@ -15,10 +15,7 @@ import '../template_engine/models/template_design/template_design_model/template
 class StyledTileWidget extends StatelessWidget {
   final StyedCarouselTile styledTile;
 
-  const StyledTileWidget({
-    super.key,
-    required this.styledTile,
-  });
+  const StyledTileWidget({super.key, required this.styledTile});
 
   CarouselText? _findText(String id) {
     for (final t in styledTile.tile.texts) {
@@ -94,19 +91,24 @@ class StyledTileWidget extends StatelessWidget {
 
     BorderSide sideFor(TemplateBorderConfig cfg) {
       final thickness = _resolveDimension(context, cfg.thickness);
-      final color =
-          _parseHexColor(cfg.color ?? "", fallback: Colors.grey.shade300);
+      final color = _parseHexColor(
+        cfg.color ?? "",
+        fallback: Colors.grey.shade300,
+      );
       return BorderSide(color: color, width: thickness.toDouble());
     }
 
     return Border(
       top: borders['top'] != null ? sideFor(borders['top']!) : BorderSide.none,
-      bottom:
-          borders['bottom'] != null ? sideFor(borders['bottom']!) : BorderSide.none,
-      left:
-          borders['left'] != null ? sideFor(borders['left']!) : BorderSide.none,
-      right:
-          borders['right'] != null ? sideFor(borders['right']!) : BorderSide.none,
+      bottom: borders['bottom'] != null
+          ? sideFor(borders['bottom']!)
+          : BorderSide.none,
+      left: borders['left'] != null
+          ? sideFor(borders['left']!)
+          : BorderSide.none,
+      right: borders['right'] != null
+          ? sideFor(borders['right']!)
+          : BorderSide.none,
     );
   }
 
@@ -121,7 +123,6 @@ class StyledTileWidget extends StatelessWidget {
     // default / unknown
     return TextAlign.start;
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -146,44 +147,32 @@ class StyledTileWidget extends StatelessWidget {
       final textModel = _findText(textConfig.id);
       if (textModel == null) continue;
 
-      final fontSize = textConfig.fontSize != null
-          ? _resolveDimension(context, textConfig.fontSize!)
-          : 14.0;
+      // model already defaulted this (e.g. 14)
+      final fontSize = _resolveDimension(context, textConfig.fontSize);
 
-      final textBoxWidth = textConfig.width != null
-          ? _resolveDimension(context, textConfig.width!)
-          : (tileWidth - textConfig.xPoint - 8);
+      // model always provides a dimension; treat <= 0 as "no explicit constraint"
+      final textBoxWidth = _resolveDimension(context, textConfig.width);
+      final rawHeight = _resolveDimension(context, textConfig.height);
+      final textBoxHeight = rawHeight <= 0 ? null : rawHeight;
 
-      final textBoxHeight = textConfig.height != null
-          ? _resolveDimension(context, textConfig.height!)
-          : null;
+      // margin & padding are never null in the model now
+      final marginLeft = _resolveDimension(context, textConfig.margin.left);
+      final marginTop = _resolveDimension(context, textConfig.margin.top);
 
-      final marginLeft = textConfig.margin != null
-          ? _resolveDimension(context, textConfig.margin!.left)
-          : 0.0;
-      final marginTop = textConfig.margin != null
-          ? _resolveDimension(context, textConfig.margin!.top)
-          : 0.0;
-
-      final padLeft = textConfig.padding != null
-          ? _resolveDimension(context, textConfig.padding!.left)
-          : 0.0;
-      final padRight = textConfig.padding != null
-          ? _resolveDimension(context, textConfig.padding!.right)
-          : 0.0;
-      final padTop = textConfig.padding != null
-          ? _resolveDimension(context, textConfig.padding!.top)
-          : 0.0;
-      final padBottom = textConfig.padding != null
-          ? _resolveDimension(context, textConfig.padding!.bottom)
-          : 0.0;
+      final padLeft = _resolveDimension(context, textConfig.padding.left);
+      final padRight = _resolveDimension(context, textConfig.padding.right);
+      final padTop = _resolveDimension(context, textConfig.padding.top);
+      final padBottom = _resolveDimension(context, textConfig.padding.bottom);
 
       final bgColor = _parseHexColor(textModel.textBg);
       final decoBg = _parseHexColor(textModel.decorationBg);
 
+      final deco = textConfig.decoration;
+      final radiusAmount = deco?.borderRadius ?? 0;
+
       Widget textChild = Text(
         textModel.text,
-        softWrap: true,  
+        softWrap: true,
         maxLines: null,
         overflow: TextOverflow.visible,
         textAlign: _mapTextAlign(textConfig.textAlignRaw),
@@ -195,16 +184,21 @@ class StyledTileWidget extends StatelessWidget {
         ),
       );
 
-      if (textConfig.decoration.borderRadius) {
+      // If decoration is present and radius > 0, wrap in a decorated Container
+      if (radiusAmount > 0) {
         textChild = Container(
           decoration: BoxDecoration(
             color: decoBg == Colors.transparent ? bgColor : decoBg,
-            borderRadius: BorderRadius.circular(8),
+            borderRadius: BorderRadius.circular(radiusAmount.toDouble()),
+            shape: deco?.shape == "CIRCULAR"
+                ? BoxShape.circle
+                : BoxShape.rectangle,
           ),
           padding: EdgeInsets.fromLTRB(padLeft, padTop, padRight, padBottom),
           child: textChild,
         );
       } else if (padLeft + padTop + padRight + padBottom > 0) {
+        // No decoration, but we still want padding if specified
         textChild = Padding(
           padding: EdgeInsets.fromLTRB(padLeft, padTop, padRight, padBottom),
           child: textChild,
@@ -222,7 +216,6 @@ class StyledTileWidget extends StatelessWidget {
           ),
         ),
       );
-      var temp = children;
     }
 
     // ----- IMAGES -----
@@ -230,19 +223,15 @@ class StyledTileWidget extends StatelessWidget {
       final imageModel = _findImage(imageConfig.id);
       if (imageModel == null) continue;
 
-      final imgWidth = imageConfig.width != null
-          ? _resolveDimension(context, imageConfig.width!)
-          : 40.0;
-      final imgHeight = imageConfig.height != null
-          ? _resolveDimension(context, imageConfig.height!)
-          : 40.0;
+      // Model always provides dimensions; treat <= 0 as "use default visual size"
+      final resolvedWidth = _resolveDimension(context, imageConfig.width);
+      final resolvedHeight = _resolveDimension(context, imageConfig.height);
 
-      final marginLeft = imageConfig.margin != null
-          ? _resolveDimension(context, imageConfig.margin!.left)
-          : 0.0;
-      final marginTop = imageConfig.margin != null
-          ? _resolveDimension(context, imageConfig.margin!.top)
-          : 0.0;
+      final imgWidth = resolvedWidth <= 0 ? 40.0 : resolvedWidth;
+      final imgHeight = resolvedHeight <= 0 ? 40.0 : resolvedHeight;
+
+      final marginLeft = _resolveDimension(context, imageConfig.margin.left);
+      final marginTop = _resolveDimension(context, imageConfig.margin.top);
 
       children.add(
         Positioned(
@@ -272,14 +261,11 @@ class StyledTileWidget extends StatelessWidget {
         // No internal padding so JSON positions (xPoint/yPoint) are exact
         decoration: BoxDecoration(
           color: Colors.white,
-        // color: Colors.pink,
+          // color: Colors.pink,
           borderRadius: BorderRadius.circular(12),
           border: border,
         ),
-        child: Stack(
-          clipBehavior: Clip.none,
-          children: children,
-        ),
+        child: Stack(clipBehavior: Clip.none, children: children),
       ),
     );
   }

@@ -3,7 +3,6 @@ import 'carousel_image.dart';
 import 'carousel_text.dart';
 import 'carousel_tile_click_action.dart';
 
-
 class CarouselTile {
   final List<CarouselText> texts;
   final List<CarouselImage> images;
@@ -32,5 +31,14 @@ class CarouselTile {
         (json['onClick'] ?? {}) as Map<String, dynamic>,
       ),
     );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'texts': texts.map((t) => t.toJson()).toList(),
+      'images': images.map((i) => i.toJson()).toList(),
+      'border': border.map((b) => b.toJson()).toList(),
+      'onClick': onClick.toJson(),
+    };
   }
 }

@@ -22,4 +22,14 @@ class CarouselText {
       decorationBg: (json['decorationbg'] ?? '') as String,
     );
   }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'text': text,
+      'id': id,
+      'color': color,
+      'textbg': textBg,
+      'decorationbg': decorationBg,
+    };
+  }
 }

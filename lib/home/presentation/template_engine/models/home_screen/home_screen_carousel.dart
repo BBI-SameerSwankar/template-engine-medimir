@@ -29,6 +29,17 @@ class HomeScreenModel {
       position: (json['position'] ?? 0) as int,
     );
   }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+      'title': title,
+      'layout_type': layoutType,
+      'templateId': templateId,
+      'tiles': tiles.map((t) => t.toJson()).toList(),
+      'position': position,
+    };
+  }
 }
 
 class HomeScreenModelFactory {

@@ -23,53 +23,61 @@
   "borders": {
     "top": {
       "color": "#DDDDDD",
-      "phonePortrait": 1,
-      "phoneLandscape": 1,
-      "phoneLandingPortrait": 1,
-      "phoneLandingLandscape": 1,
-      "tabPortrait": 1,
-      "tabLandscape": 1,
-      "tabLandingPortrait": 1,
-      "tabLandingLandscape": 1
+      "thickness": {
+        "phonePortrait": 1,
+        "phoneLandscape": 1,
+        "phoneLandingPortrait": 1,
+        "phoneLandingLandscape": 1,
+        "tabPortrait": 1,
+        "tabLandscape": 1,
+        "tabLandingPortrait": 1,
+        "tabLandingLandscape": 1
+      }
     },
     "bottom": {
       "color": "#DDDDDD",
-      "phonePortrait": 1,
-      "phoneLandscape": 1,
-      "phoneLandingPortrait": 1,
-      "phoneLandingLandscape": 1,
-      "tabPortrait": 1,
-      "tabLandscape": 1,
-      "tabLandingPortrait": 1,
-      "tabLandingLandscape": 1
+      "thickness": {
+        "phonePortrait": 1,
+        "phoneLandscape": 1,
+        "phoneLandingPortrait": 1,
+        "phoneLandingLandscape": 1,
+        "tabPortrait": 1,
+        "tabLandscape": 1,
+        "tabLandingPortrait": 1,
+        "tabLandingLandscape": 1
+      }
     },
     "left": {
       "color": "#DDDDDD",
-      "phonePortrait": 1,
-      "phoneLandscape": 1,
-      "phoneLandingPortrait": 1,
-      "phoneLandingLandscape": 1,
-      "tabPortrait": 1,
-      "tabLandscape": 1,
-      "tabLandingPortrait": 1,
-      "tabLandingLandscape": 1
+      "thickness": {
+        "phonePortrait": 1,
+        "phoneLandscape": 1,
+        "phoneLandingPortrait": 1,
+        "phoneLandingLandscape": 1,
+        "tabPortrait": 1,
+        "tabLandscape": 1,
+        "tabLandingPortrait": 1,
+        "tabLandingLandscape": 1
+      }
     },
     "right": {
       "color": "#DDDDDD",
-      "phonePortrait": 1,
-      "phoneLandscape": 1,
-      "phoneLandingPortrait": 1,
-      "phoneLandingLandscape": 1,
-      "tabPortrait": 1,
-      "tabLandscape": 1,
-      "tabLandingPortrait": 1,
-      "tabLandingLandscape": 1
+      "thickness": {
+        "phonePortrait": 1,
+        "phoneLandscape": 1,
+        "phoneLandingPortrait": 1,
+        "phoneLandingLandscape": 1,
+        "tabPortrait": 1,
+        "tabLandscape": 1,
+        "tabLandingPortrait": 1,
+        "tabLandingLandscape": 1
+      }
     }
   },
   "texts": [
     {
       "id": "title",
-      "textAlign": "center", 
+      "textAlign": "center",
       "maxlines": 1,
       "xPoint": 0,
       "yPoint": 73,
@@ -105,16 +113,32 @@
         "tabLandingLandscape": 26
       },
       "padding": {
-        "paddingLeft": { "phonePortrait": 0 },
-        "paddingRight": { "phonePortrait": 0 },
-        "paddingTop": { "phonePortrait": 0 },
-        "paddingBottom": { "phonePortrait": 0 }
+        "left": {
+          "phonePortrait": 0
+        },
+        "right": {
+          "phonePortrait": 0
+        },
+        "top": {
+          "phonePortrait": 0
+        },
+        "bottom": {
+          "phonePortrait": 0
+        }
       },
       "margin": {
-        "marginLeft": { "phonePortrait": 0 },
-        "marginRight": { "phonePortrait": 0 },
-        "marginTop": { "phonePortrait": 0 },
-        "marginBottom": { "phonePortrait": 0 }
+        "left": {
+          "phonePortrait": 0
+        },
+        "right": {
+          "phonePortrait": 0
+        },
+        "top": {
+          "phonePortrait": 0
+        },
+        "bottom": {
+          "phonePortrait": 0
+        }
       },
       "decoration": {
         "borderRadius": false,
@@ -148,10 +172,18 @@
         "tabLandingLandscape": 54
       },
       "margin": {
-        "marginLeft": { "phonePortrait": 0 },
-        "marginRight": { "phonePortrait": 0 },
-        "marginTop": { "phonePortrait": 0 },
-        "marginBottom": { "phonePortrait": 0 }
+        "left": {
+          "phonePortrait": 0
+        },
+        "right": {
+          "phonePortrait": 0
+        },
+        "top": {
+          "phonePortrait": 0
+        },
+        "bottom": {
+          "phonePortrait": 0
+        }
       }
     }
   ]
