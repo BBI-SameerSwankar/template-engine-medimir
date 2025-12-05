@@ -196,8 +196,8 @@
         }
       },
       "decoration": {
-        "borderRadius": false,
-        "shape": "RECTANGLE"
+        "borderRadius": 10,
+        "shape": "ROUND"
       }
     },
     {

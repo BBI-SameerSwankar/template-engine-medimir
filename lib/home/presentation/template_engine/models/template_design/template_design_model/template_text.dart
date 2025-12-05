@@ -56,8 +56,14 @@ class TemplateTextConfig {
       Map<String, dynamic> fallback = dimFallback,
     }) {
       final raw = json[key];
+
+      // NOT a map → use fallback
       if (raw is! Map) return DeviceDimension.fromJson(fallback);
 
+      // EMPTY map → use fallback
+      if (raw.isEmpty) return DeviceDimension.fromJson(fallback);
+
+      // Invalid keys → use fallback
       if (raw.keys.any((k) => k is! String)) {
         return DeviceDimension.fromJson(fallback);
       }
@@ -85,12 +91,11 @@ class TemplateTextConfig {
     return TemplateTextConfig(
       id: (json['id'] ?? '') as String,
       maxLines: (json['maxlines'] ?? 1) as int,
-      xPoint: (json['xPoint'] ?? 0) as int,
+      xPoint: (json['xPoint'] ?? 0) as int, 
       yPoint: (json['yPoint'] ?? 0) as int,
 
       fontSize: _dim('fontsize', fallback: fontSizeFallback),
       fontWeight: json['fontWeight'] as String?,
-
 
       width: _dim('width'),
       height: _dim('height'),

@@ -22,7 +22,7 @@ class DeviceDimension {
   factory DeviceDimension.fromJson(Map<String, dynamic> json) {
     
     // phone defaults
-    final phonePortrait = json['phonePortrait'] as num;
+     final num phonePortrait = (json['phonePortrait'] as num?) ?? 0;
     final phoneLandscape = (json['phoneLandscape'] as num?) ?? phonePortrait;
     // tab defaults
     final tabPortrait = (json['tabPortrait'] as num?) ?? phonePortrait;

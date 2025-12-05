@@ -29,7 +29,8 @@ class TemplateDesignModel {
   }
 
   factory TemplateDesignModel.fromJson(Map<String, dynamic> json) {
-    final bordersJson = (json['borders'] ?? {}) as Map<String, dynamic>;
+    final bordersJson = (json['borders'] as Map?)?.cast<String, dynamic>() ?? <String, dynamic>{};
+
 
     final widthJson = json['width'];
     final heightJson = json['height'];
