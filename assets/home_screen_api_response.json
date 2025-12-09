@@ -323,7 +323,7 @@
             "id": "badge1",
             "color": "#577BED",
             "textbg": "#ffffff",
-            "decorationbg": "#ffffff"
+            "decorationbg": "#577BED"
           }
         ],
         "images": [

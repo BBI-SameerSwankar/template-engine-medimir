@@ -2,23 +2,23 @@
   "id": "medicalAreas",
   "width": {
     "phonePortrait": 104,
-    "phoneLandscape": 140,
-    "phoneLandingPortrait": 140,
-    "phoneLandingLandscape": 140,
-    "tabPortrait": 160,
-    "tabLandscape": 160,
-    "tabLandingPortrait": 160,
-    "tabLandingLandscape": 160
+    "phoneLandscape": 104,
+    "phoneLandingPortrait": 104,
+    "phoneLandingLandscape": 104,
+    "tabPortrait": 104,
+    "tabLandscape": 104,
+    "tabLandingPortrait": 104,
+    "tabLandingLandscape": 104
   },
   "height": {
     "phonePortrait": 104,
-    "phoneLandscape": 140,
-    "phoneLandingPortrait": 140,
-    "phoneLandingLandscape": 140,
-    "tabPortrait": 150,
-    "tabLandscape": 150,
-    "tabLandingPortrait": 150,
-    "tabLandingLandscape": 150
+    "phoneLandscape": 104,
+    "phoneLandingPortrait": 104,
+    "phoneLandingLandscape": 104,
+    "tabPortrait": 104,
+    "tabLandscape": 104,
+    "tabLandingPortrait": 104,
+    "tabLandingLandscape": 104
   },
   "borders": {
     "top": {
@@ -83,13 +83,13 @@
       "yPoint": 73,
       "fontsize": {
         "phonePortrait": 13,
-        "phoneLandscape": 15,
-        "phoneLandingPortrait": 15,
-        "phoneLandingLandscape": 15,
-        "tabPortrait": 16,
-        "tabLandscape": 16,
-        "tabLandingPortrait": 16,
-        "tabLandingLandscape": 16
+        "phoneLandscape": 13,
+        "phoneLandingPortrait": 13,
+        "phoneLandingLandscape": 13,
+        "tabPortrait": 13,
+        "tabLandscape": 13,
+        "tabLandingPortrait": 13,
+        "tabLandingLandscape": 13
       },
       "fontWeight": "NORMAL",
       "width": {
@@ -97,20 +97,20 @@
         "phoneLandscape": 108,
         "phoneLandingPortrait": 108,
         "phoneLandingLandscape": 108,
-        "tabPortrait": 130,
-        "tabLandscape": 130,
-        "tabLandingPortrait": 130,
-        "tabLandingLandscape": 130
+        "tabPortrait": 108,
+        "tabLandscape": 108,
+        "tabLandingPortrait": 108,
+        "tabLandingLandscape": 108
       },
       "height": {
         "phonePortrait": 24,
         "phoneLandscape": 24,
         "phoneLandingPortrait": 24,
         "phoneLandingLandscape": 24,
-        "tabPortrait": 26,
-        "tabLandscape": 26,
-        "tabLandingPortrait": 26,
-        "tabLandingLandscape": 26
+        "tabPortrait": 24,
+        "tabLandscape": 24,
+        "tabLandingPortrait": 24,
+        "tabLandingLandscape": 24
       },
       "padding": {
         "left": {
@@ -156,20 +156,20 @@
         "phoneLandscape": 48,
         "phoneLandingPortrait": 48,
         "phoneLandingLandscape": 48,
-        "tabPortrait": 54,
-        "tabLandscape": 54,
-        "tabLandingPortrait": 54,
-        "tabLandingLandscape": 54
+        "tabPortrait": 48,
+        "tabLandscape": 48,
+        "tabLandingPortrait": 48,
+        "tabLandingLandscape": 48
       },
       "height": {
         "phonePortrait": 48,
         "phoneLandscape": 48,
         "phoneLandingPortrait": 48,
         "phoneLandingLandscape": 48,
-        "tabPortrait": 54,
-        "tabLandscape": 54,
-        "tabLandingPortrait": 54,
-        "tabLandingLandscape": 54
+        "tabPortrait": 48,
+        "tabLandscape": 48,
+        "tabLandingPortrait": 48,
+        "tabLandingLandscape": 48
       },
       "margin": {
         "left": {
