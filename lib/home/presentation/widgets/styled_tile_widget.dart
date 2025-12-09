@@ -52,11 +52,7 @@ class StyledTileWidget extends StatelessWidget {
     if (hex.isEmpty) return fallback;
     var clean = hex.toUpperCase().replaceAll('#', '');
     if (clean.length == 6) clean = 'FF$clean';
-    try {
-      return Color(int.parse(clean, radix: 16));
-    } catch (_) {
-      return fallback;
-    }
+    return Color(int.parse(clean, radix: 16));
   }
 
   FontWeight _mapFontWeight(String? w) {
@@ -89,7 +85,7 @@ class StyledTileWidget extends StatelessWidget {
   Border _buildBorder(BuildContext context) {
     final borders = styledTile.template.borders;
     if (borders.isEmpty) {
-      // Default to a light grey outline.
+      // Default to a light grey outline similar to the screenshot.
       return Border.all(color: Colors.grey.shade300, width: 1);
     }
 
@@ -124,6 +120,7 @@ class StyledTileWidget extends StatelessWidget {
     if (v == 'RIGHT' || v == 'END') return TextAlign.end;
     if (v == 'LEFT' || v == 'START') return TextAlign.start;
 
+    // default / unknown
     return TextAlign.start;
   }
 
@@ -150,12 +147,15 @@ class StyledTileWidget extends StatelessWidget {
       final textModel = _findText(textConfig.id);
       if (textModel == null) continue;
 
+      // model already defaulted this (e.g. 14)
       final fontSize = _resolveDimension(context, textConfig.fontSize);
 
+      // model always provides a dimension; treat <= 0 as "no explicit constraint"
       final textBoxWidth = _resolveDimension(context, textConfig.width);
       final rawHeight = _resolveDimension(context, textConfig.height);
       final textBoxHeight = rawHeight <= 0 ? null : rawHeight;
 
+      // margin & padding are never null in the model now
       final marginLeft = _resolveDimension(context, textConfig.margin.left);
       final marginTop = _resolveDimension(context, textConfig.margin.top);
 
@@ -164,21 +164,18 @@ class StyledTileWidget extends StatelessWidget {
       final padTop = _resolveDimension(context, textConfig.padding.top);
       final padBottom = _resolveDimension(context, textConfig.padding.bottom);
 
-      // Colors from data:
-      // textbg -> fill color of the pill/tag
-      // decorationbg -> border color of the pill/tag
-      final fillColor = _parseHexColor(textModel.textBg);        // textbg
-      final decoColor = _parseHexColor(textModel.decorationBg);  // decorationbg
+      // textbg -> background fill
+      // decorationbg -> border color
+      final bgColor = _parseHexColor(textModel.textBg);
+      final decoBg = _parseHexColor(textModel.decorationBg);
 
       final deco = textConfig.decoration;
-      // Ensure your model makes this an int, not bool.
-      final radius = (deco?.borderRadius ?? 0).toDouble();
+      final radiusAmount = deco?.borderRadius ?? 0;
 
-      // Base text widget
       Widget textChild = Text(
         textModel.text,
         softWrap: true,
-        maxLines: textConfig.maxLines, // assuming your model has this; if not, set to null
+        maxLines: null,
         overflow: TextOverflow.visible,
         textAlign: _mapTextAlign(textConfig.textAlignRaw),
         style: TextStyle(
@@ -189,37 +186,27 @@ class StyledTileWidget extends StatelessWidget {
         ),
       );
 
-      // Decide if we need a container (for padding/border/background)
-      final needsContainer =
-          padLeft + padTop + padRight + padBottom > 0 ||
-          radius > 0 ||
-          fillColor != Colors.transparent ||
-          decoColor != Colors.transparent;
-
-      if (needsContainer) {
-        Color? containerColor;
-        Border? border;
-
-        // textbg controls fill
-        if (fillColor != Colors.transparent) {
-          containerColor = fillColor;
-        } else {
-          containerColor = Colors.transparent;
-        }
-
-        // decorationbg controls border color
-        if (decoColor != Colors.transparent) {
-          border = Border.all(color: decoColor, width: 1.0);
-        }
-
+      // If decoration is present and radius > 0, wrap in a decorated Container
+      if (radiusAmount > 0) {
         textChild = Container(
           decoration: BoxDecoration(
-            color: containerColor,
-            borderRadius: radius > 0 ? BorderRadius.circular(radius) : null,
-            border: border,
-            // For text we keep rectangle; "ROUND" is handled via high radius.
-            shape: BoxShape.rectangle,
+            // fill from textbg only
+            color: bgColor == Colors.transparent ? Colors.transparent : bgColor,
+            borderRadius: BorderRadius.circular(radiusAmount.toDouble()),
+            // border from decorationbg only
+            border: decoBg == Colors.transparent
+                ? null
+                : Border.all(color: decoBg, width: 1),
+            shape: deco?.shape == "CIRCULAR"
+                ? BoxShape.circle
+                : BoxShape.rectangle,
           ),
+          padding: EdgeInsets.fromLTRB(padLeft, padTop, padRight, padBottom),
+          child: textChild,
+        );
+      } else if (padLeft + padTop + padRight + padBottom > 0) {
+        // No decoration, but we still want padding if specified
+        textChild = Padding(
           padding: EdgeInsets.fromLTRB(padLeft, padTop, padRight, padBottom),
           child: textChild,
         );
@@ -243,6 +230,7 @@ class StyledTileWidget extends StatelessWidget {
       final imageModel = _findImage(imageConfig.id);
       if (imageModel == null) continue;
 
+      // Model always provides dimensions; treat <= 0 as "use default visual size"
       final resolvedWidth = _resolveDimension(context, imageConfig.width);
       final resolvedHeight = _resolveDimension(context, imageConfig.height);
 
@@ -276,9 +264,11 @@ class StyledTileWidget extends StatelessWidget {
       onTap: () => _handleClick(context, tile.onClick),
       child: Container(
         width: tileWidth,
-        height: tileHeight,
+        // height: tileHeight,
+        // No internal padding so JSON positions (xPoint/yPoint) are exact
         decoration: BoxDecoration(
           color: Colors.white,
+          // color: Colors.pink,
           borderRadius: BorderRadius.circular(12),
           border: border,
         ),
