@@ -79,7 +79,7 @@
       "id": "title",
       "textAlign": "center",
       "maxlines": 1,
-      "xPoint": 2,
+      "xPoint": 0,
       "yPoint": 73,
       "fontsize": {
         "phonePortrait": 12,
@@ -93,14 +93,14 @@
       },
       "fontWeight": "NORMAL",
       "width": {
-        "phonePortrait": 100,
-        "phoneLandscape": 100,
-        "phoneLandingPortrait": 100,
-        "phoneLandingLandscape": 100,
-        "tabPortrait": 100,
-        "tabLandscape": 100,
-        "tabLandingPortrait": 100,
-        "tabLandingLandscape": 100
+        "phonePortrait": 104,
+        "phoneLandscape": 104,
+        "phoneLandingPortrait": 104,
+        "phoneLandingLandscape": 104,
+        "tabPortrait": 117,
+        "tabLandscape": 117,
+        "tabLandingPortrait": 117,
+        "tabLandingLandscape": 117
       },
       "height": {
         "phonePortrait": 15,
