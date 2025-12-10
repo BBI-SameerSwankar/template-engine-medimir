@@ -158,13 +158,6 @@
           },
           {
             "text": "Calculator",
-            "id": "abbr",
-            "color": "#8E8E93",
-            "textbg": "#ffffff",
-            "decorationbg": "#ffffff"
-          },
-          {
-            "text": "",
             "id": "toolType",
             "color": "#8E8E93",
             "textbg": "#ffffff",
@@ -202,13 +195,6 @@
           },
           {
             "text": "Calculator",
-            "id": "abbr",
-            "color": "#8E8E93",
-            "textbg": "#ffffff",
-            "decorationbg": "#ffffff"
-          },
-          {
-            "text": "",
             "id": "toolType",
             "color": "#8E8E93",
             "textbg": "#ffffff",
@@ -246,13 +232,6 @@
           },
           {
             "text": "Calculator",
-            "id": "abbr",
-            "color": "#8E8E93",
-            "textbg": "#ffffff",
-            "decorationbg": "#ffffff"
-          },
-          {
-            "text": "",
             "id": "toolType",
             "color": "#8E8E93",
             "textbg": "#ffffff",

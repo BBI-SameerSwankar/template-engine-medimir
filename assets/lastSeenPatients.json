@@ -5,10 +5,10 @@
     "phoneLandscape": 104,
     "phoneLandingPortrait": 104,
     "phoneLandingLandscape": 104,
-    "tabPortrait": 104,
-    "tabLandscape": 104,
-    "tabLandingPortrait": 104,
-    "tabLandingLandscape": 104
+    "tabPortrait": 117,
+    "tabLandscape": 117,
+    "tabLandingPortrait": 117,
+    "tabLandingLandscape": 117
   },
   "height": {
     "phonePortrait": 154,
@@ -81,14 +81,14 @@
       "xPoint": 8,
       "yPoint": 56,
       "fontsize": {
-        "phonePortrait": 15,
-        "phoneLandscape": 15,
-        "phoneLandingPortrait": 15,
-        "phoneLandingLandscape": 15,
-        "tabPortrait": 15,
-        "tabLandscape": 15,
-        "tabLandingPortrait": 15,
-        "tabLandingLandscape": 15
+        "phonePortrait": 14,
+        "phoneLandscape": 14,
+        "phoneLandingPortrait": 14,
+        "phoneLandingLandscape": 14,
+        "tabPortrait": 14,
+        "tabLandscape": 14,
+        "tabLandingPortrait": 14,
+        "tabLandingLandscape": 14
       },
       "fontWeight": "MEDIUM",
       "width": {
@@ -219,14 +219,14 @@
       "xPoint": 8,
       "yPoint": 100,
       "fontsize": {
-        "phonePortrait": 13,
-        "phoneLandscape": 13,
-        "phoneLandingPortrait": 13,
-        "phoneLandingLandscape": 13,
-        "tabPortrait": 13,
-        "tabLandscape": 13,
-        "tabLandingPortrait": 13,
-        "tabLandingLandscape": 13
+        "phonePortrait": 14,
+        "phoneLandscape": 14,
+        "phoneLandingPortrait": 14,
+        "phoneLandingLandscape": 14,
+        "tabPortrait": 14,
+        "tabLandscape": 14,
+        "tabLandingPortrait": 14,
+        "tabLandingLandscape": 14
       },
       "fontWeight": "NORMAL",
       "width": {
@@ -288,14 +288,14 @@
       "xPoint": 25,
       "yPoint": 100,
       "fontsize": {
-        "phonePortrait": 13,
-        "phoneLandscape": 13,
-        "phoneLandingPortrait": 13,
-        "phoneLandingLandscape": 13,
-        "tabPortrait": 13,
-        "tabLandscape": 13,
-        "tabLandingPortrait": 13,
-        "tabLandingLandscape": 13
+        "phonePortrait": 14,
+        "phoneLandscape": 14,
+        "phoneLandingPortrait": 14,
+        "phoneLandingLandscape": 14,
+        "tabPortrait": 14,
+        "tabLandscape": 14,
+        "tabLandingPortrait": 14,
+        "tabLandingLandscape": 14
       },
       "fontWeight": "NORMAL",
       "width": {
@@ -353,9 +353,10 @@
     },
     {
       "id": "badge1",
+      "textAlign":"center",
       "maxlines": 1,
       "xPoint": 28,
-      "yPoint": 125,
+      "yPoint": 130,
       "fontsize": {
         "phonePortrait": 11,
         "phoneLandscape": 11,
@@ -368,37 +369,37 @@
       },
       "fontWeight": "MEDIUM",
       "width": {
-        "phonePortrait": 35,
-        "phoneLandscape": 35,
-        "phoneLandingPortrait": 35,
-        "phoneLandingLandscape": 35,
-        "tabPortrait": 35,
-        "tabLandscape": 35,
-        "tabLandingPortrait": 35,
-        "tabLandingLandscape": 35
+        "phonePortrait": 32,
+        "phoneLandscape": 32,
+        "phoneLandingPortrait": 32,
+        "phoneLandingLandscape": 32,
+        "tabPortrait": 32,
+        "tabLandscape": 32,
+        "tabLandingPortrait": 32,
+        "tabLandingLandscape": 32
       },
       "height": {
-        "phonePortrait": 22,
-        "phoneLandscape": 22,
-        "phoneLandingPortrait": 22,
-        "phoneLandingLandscape": 22,
-        "tabPortrait": 22,
-        "tabLandscape": 22,
-        "tabLandingPortrait": 22,
-        "tabLandingLandscape": 22
+        "phonePortrait": 16,
+        "phoneLandscape": 16,
+        "phoneLandingPortrait": 16,
+        "phoneLandingLandscape": 16,
+        "tabPortrait": 16,
+        "tabLandscape": 16,
+        "tabLandingPortrait": 16,
+        "tabLandingLandscape": 16
       },
       "padding": {
         "left": {
-          "phonePortrait": 8
+          "phonePortrait": 0
         },
         "right": {
-          "phonePortrait": 8
+          "phonePortrait": 0
         },
         "top": {
-          "phonePortrait": 4
+          "phonePortrait": 0
         },
         "bottom": {
-          "phonePortrait": 4
+          "phonePortrait": 0
         }
       },
       "margin": {

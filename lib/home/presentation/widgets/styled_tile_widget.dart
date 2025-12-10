@@ -124,6 +124,37 @@ class StyledTileWidget extends StatelessWidget {
     return TextAlign.start;
   }
 
+  /// Compute the final LEFT position for an image, supporting
+  /// horizontal alignment inside the tile.
+  ///
+  /// - If [imageConfig.horizontalAlign] is "CENTER", the image is centered.
+  /// - If "RIGHT", it is right-aligned.
+  /// - If null/unknown/"LEFT", we use legacy xPoint + margin.
+  double _resolveImageLeft({
+    required TemplateImageConfig imageConfig,
+    required double tileWidth,
+    required double imgWidth,
+    required double marginLeft,
+  }) {
+    final alignRaw = imageConfig.horizontalAlign?.toUpperCase();
+
+    switch (alignRaw) {
+      case 'CENTER':
+        // Center in the card width, then apply extra margin
+        return (tileWidth - imgWidth) / 2 + marginLeft;
+
+      case 'RIGHT':
+        // Right aligned, marginLeft acts like "right padding" here
+        return tileWidth - imgWidth - marginLeft;
+
+      case 'LEFT':
+      case null:
+      default:
+        // Legacy behaviour: explicit xPoint is used
+        return imageConfig.xPoint.toDouble() + marginLeft;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final template = styledTile.template;
@@ -240,9 +271,16 @@ class StyledTileWidget extends StatelessWidget {
       final marginLeft = _resolveDimension(context, imageConfig.margin.left);
       final marginTop = _resolveDimension(context, imageConfig.margin.top);
 
+      final left = _resolveImageLeft(
+        imageConfig: imageConfig,
+        tileWidth: tileWidth,
+        imgWidth: imgWidth,
+        marginLeft: marginLeft,
+      );
+
       children.add(
         Positioned(
-          left: imageConfig.xPoint.toDouble() + marginLeft,
+          left: left,
           top: imageConfig.yPoint.toDouble() + marginTop,
           child: SizedBox(
             width: imgWidth,

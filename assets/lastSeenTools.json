@@ -5,10 +5,10 @@
     "phoneLandscape": 160,
     "phoneLandingPortrait": 160,
     "phoneLandingLandscape": 160,
-    "tabPortrait": 160,
-    "tabLandscape": 160,
-    "tabLandingPortrait": 160,
-    "tabLandingLandscape": 160
+    "tabPortrait": 179,
+    "tabLandscape": 179,
+    "tabLandingPortrait": 179,
+    "tabLandingLandscape": 179
   },
   "height": {
     "phonePortrait": 99,
@@ -201,7 +201,7 @@
       }
     },
     {
-      "id": "abbr",
+      "id": "toolType",
       "maxlines": 1,
       "xPoint": 5,
       "yPoint": 75,

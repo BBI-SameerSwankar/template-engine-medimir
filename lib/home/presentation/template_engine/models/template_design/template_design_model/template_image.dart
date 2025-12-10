@@ -8,10 +8,12 @@ class TemplateImageConfig {
   final int yPoint;
 
   final DeviceDimension width;
-
   final DeviceDimension height;
 
   final TemplateEdgeInsetsConfig margin;
+
+  /// NEW: horizontal alignment inside the tile: LEFT / CENTER / RIGHT
+  final String? horizontalAlign;
 
   const TemplateImageConfig({
     required this.id,
@@ -20,19 +22,13 @@ class TemplateImageConfig {
     required this.width,
     required this.height,
     required this.margin,
+    this.horizontalAlign,
   });
 
   factory TemplateImageConfig.fromJson(Map<String, dynamic> json) {
     const dimFallback = {
       "phonePortrait": 0,
       "phoneLandscape": 0,
-    };
-
-    const edgeFallback = {
-      "left": dimFallback,
-      "right": dimFallback,
-      "top": dimFallback,
-      "bottom": dimFallback,
     };
 
     DeviceDimension _dim(String key) {
@@ -69,6 +65,7 @@ class TemplateImageConfig {
       width: _dim('width'),
       height: _dim('height'),
       margin: _margin(),
+      horizontalAlign: json['horizontalAlign'] as String?, // NEW
     );
   }
 
@@ -85,6 +82,7 @@ class TemplateImageConfig {
         'top': margin.top.toJson(),
         'bottom': margin.bottom.toJson(),
       },
+      'horizontalAlign': horizontalAlign,
     };
   }
 }
