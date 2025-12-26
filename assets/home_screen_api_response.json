@@ -310,6 +310,11 @@
             "path": "https://www.svgrepo.com/download/527946/user-circle.svg",
             "id": "avatar",
             "color": "#007AFF"
+          },
+          {
+            "path": "https://www.svgrepo.com/download/527946/user-circle.svg",
+            "id": "menu",
+            "color": "#007AFF"
           }
         ],
         "border": [],

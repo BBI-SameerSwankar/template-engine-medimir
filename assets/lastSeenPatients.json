@@ -602,6 +602,45 @@
       }
     },
     {
+      "id": "menu",
+      "xPoint": 80,
+      "yPoint": 136,
+      "width": {
+        "phonePortrait": 16,
+        "phoneLandscape": 16,
+        "phoneLandingPortrait": 16,
+        "phoneLandingLandscape": 16,
+        "tabPortrait": 16,
+        "tabLandscape": 16,
+        "tabLandingPortrait": 16,
+        "tabLandingLandscape": 16
+      },
+      "height": {
+        "phonePortrait": 4,
+        "phoneLandscape": 4,
+        "phoneLandingPortrait": 4,
+        "phoneLandingLandscape": 4,
+        "tabPortrait": 4,
+        "tabLandscape": 4,
+        "tabLandingPortrait": 4,
+        "tabLandingLandscape": 4
+      },
+      "margin": {
+        "left": {
+          "phonePortrait": 0
+        },
+        "right": {
+          "phonePortrait": 0
+        },
+        "top": {
+          "phonePortrait": 0
+        },
+        "bottom": {
+          "phonePortrait": 0
+        }
+      }
+    },
+    {
       "id": "status",
       "xPoint": 108,
       "yPoint": 22,
